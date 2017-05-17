@@ -1,0 +1,10 @@
+﻿{
+  "01":["阿尔卑斯","QWaerbeisi",""],
+  "02":["白金汉宫","QWbaijinhangong",""],
+  "03":["北美风情","QWbeimeifengqing",""],
+  "04":["佛罗伦萨","QWfoluolunsa",""],
+  "05":["简爱布纹","QWjianaibuwen",""],
+  "06":["天鹅湖","QWtianehu",""],
+  "07":["托斯卡纳","QWtuosikana",""],
+  "08":["伊丽莎白","QWyilishabai",""]
+}

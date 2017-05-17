@@ -1,0 +1,107 @@
+.common-inner {
+  position: relative;
+}
+#banner {
+  width: 100%;
+  height: 947px;
+  overflow: hidden;
+  position: relative;
+}
+#banner img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+.main {
+  width: 100%;
+  background: #e6ffea;
+}
+.main img {
+  display: block;
+}
+.main p {
+  margin-bottom: -4px;
+}
+.main .mainline {
+  width: 100%;
+  height: 154px;
+  padding: 62px 0 72px ;
+  background: #8ec63f;
+}
+.main .mainline h3,
+.main .mainline h2 {
+  text-align: center;
+  color: #fff;
+}
+.main .mainline h3 {
+  font-size: 50px;
+  line-height: 64px;
+}
+.main .mainline h2 {
+  font-size: 66px;
+  line-height: 92px;
+}
+.main .mainBottom {
+  width: 100%;
+}
+.main .mainBottom img {
+  position: relative;
+  margin-left: -960px;
+  left: 50%;
+  top: 0;
+}
+.main .zhuantiP0 {
+  background: #fff;
+}
+.main .zhuantiP1 {
+  background: #1e1a1b;
+}
+.main .zhuantiP00 {
+  background: #010101;
+  overflow: hidden;
+}
+.main .ZTbaoming {
+  position: absolute;
+  top: 159px;
+  right: 36px;
+  width: 302px;
+  height: 257px;
+}
+.main .ZTbaoming input[type="text"] {
+  width: 300px;
+  height: 59px;
+  font-size: 30px;
+}
+.main .ZTbaoming .phNub {
+  margin: 33px 0;
+}
+.main .ZTbaoming .baomingBTN {
+  width: 500px;
+  height: 75px;
+  background: #be9f79;
+  color: #fff;
+  line-height: 72px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 350px;
+  right: -7px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.main .ZTzixun {
+  position: absolute;
+  top: 452px;
+  right: 172px;
+  width: 161px;
+  height: 53px;
+  cursor: pointer;
+}
+.main .ZTzixun1 {
+  top: 1062px;
+  right: 961px;
+}
+.main .ZTzixun2 {
+  top: 1712px;
+}

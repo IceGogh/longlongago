@@ -1,0 +1,167 @@
+#banner {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  z-index: 200;
+}
+#banner img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+.joinW {
+  width: 1420px;
+  margin: 0 auto;
+}
+#main img {
+  display: block;
+}
+#main .title {
+  width: 100%;
+  border-bottom: 1px dotted #dbd4cd;
+}
+#main .title h3 {
+  font-size: 26px;
+  color: tan;
+  height: 50px;
+  line-height: 50px;
+}
+#main ul li {
+  position: relative;
+}
+#main ul li > div {
+  position: absolute;
+}
+#main ul li .DZyuyue {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  z-index: 100;
+  left: 0px;
+  top: 150px;
+  text-align: center;
+  background: #fff;
+  color: #725d4d;
+}
+#main ul li .DZyuyue span {
+  display: inline-block;
+  width: 172px;
+  height: 40px;
+  line-height: 40px;
+  background: #5895d5;
+  color: #fff;
+  cursor: pointer;
+}
+#main ul li .DZbaoming {
+  position: absolute;
+  padding-top: 10px;
+  width: 400px;
+  height: 290px;
+  left: 50%;
+  margin-left: -105px;
+  top: 160px;
+  z-index: 200;
+}
+#main ul li .DZbaoming input {
+  width: 97%;
+  height: 40px;
+  margin: 10px auto;
+  font-size: 34px;
+  text-indent: .5em;
+}
+#main ul li .DZbaoming .DZBtn {
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background: #603c1b;
+  border-radius: 4px;
+  margin: 28px auto;
+  text-align: center;
+  cursor: pointer;
+}
+#main ul li img {
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+  display: block;
+}
+#main .main-l {
+  padding-left: 10px;
+  float: left;
+  width: 170px;
+  margin-top: 55px;
+}
+#main .main-l ul {
+  margin-top: 20px;
+}
+#main .main-l ul .selectLi {
+  background: #86b7f7;
+  color: #fff;
+}
+#main .main-l ul li {
+  padding-left: 10px;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  border-bottom: 1px dotted #dbd4cd;
+}
+#main .main-r {
+  float: right;
+  width: 800px;
+  margin-top: 55px;
+}
+#main .main-r h3 {
+  float: left;
+}
+#main .main-r .title2nd {
+  float: right;
+  height: 50px;
+  line-height: 50px;
+}
+#main .main-r .main-box {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+#main .main-r .main-box img {
+  padding: 10px;
+  float: right;
+}
+#main .main-r .main-box a {
+  font-style: italic;
+  text-decoration: underline;
+}
+#main .main-r .main-box a:hover {
+  color: red;
+  text-decoration: none;
+}
+#main .main-r .main-box p {
+  text-indent: 2em;
+}
+#main .main-r .main-inner {
+  display: none;
+  padding-bottom: 40px;
+}
+#main .main-r .aboutshow {
+  display: block;
+}
+#main .main-r .main-inner:nth-of-type(2) h4 {
+  color: #b4d230;
+  text-indent: .5em;
+}
+.main0 {
+  width: 100%;
+  background: #e1e1e1;
+  height: 44px;
+}
+.imgMarginT {
+  margin-top: -5px;
+}
+.imgMarginB {
+  margin-bottom: -4px;
+}

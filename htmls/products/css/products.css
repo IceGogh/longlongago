@@ -1,0 +1,87 @@
+#main {
+  padding: 20px 0;
+  z-index: 150;
+  margin-bottom: 40px;
+}
+#main .title {
+  margin-bottom: 36px;
+}
+.maintitle {
+  border-bottom: 1px #969390 dotted;
+  padding: 15px 0;
+}
+.maintitle span {
+  font-weight: bold;
+}
+.maintitle a {
+  display: inline-block;
+  margin: 0 10px;
+}
+.maintitle a:hover {
+  color: #ffde8f;
+}
+.maintitle2 {
+  margin-bottom: 50px;
+}
+.mainbox {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #fff;
+}
+.ye {
+  margin-top: 20px;
+}
+.ye .totleye,
+.ye .dangqian {
+  color: #F26522;
+}
+.ye .firstP,
+.ye .preP,
+.ye .nextP,
+.ye .lastP {
+  display: inline-block;
+  width: 85px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #777;
+  color: #fff;
+  cursor: pointer;
+}
+#main .product {
+  display: block;
+  width: 280px;
+  height: 340px;
+  margin: 10px;
+  float: left;
+  position: relative;
+  transition: all .4s;
+}
+#main .product span {
+  display: block;
+  width: 100%;
+  height: 280px;
+  font-size: 0;
+  overflow: hidden;
+}
+#main .product span img {
+  width: 100%;
+}
+#main .product > div {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-indent: .5em;
+  bottom: 30px;
+  left: 0;
+}
+#main .product .style {
+  color: red;
+  bottom: 30px;
+}
+#main .product .style2nd {
+  color: #2d2d2d;
+  bottom: 0;
+  overflow: hidden;
+}
