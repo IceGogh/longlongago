@@ -112,6 +112,7 @@ $(function(){
         BtnClick($('.shenqin'));
         BtnClick($('.buttonIN'));
         BtnClick($('.baomingBTN'));
+        BtnClick($('.ZT3yuyue'));
 
 
         function BtnClick(btn){

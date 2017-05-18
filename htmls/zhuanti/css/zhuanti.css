@@ -105,3 +105,89 @@
 .main .ZTzixun2 {
   top: 1712px;
 }
+.zhuanti3box {
+  width: 100%;
+  height: 250px;
+  background: #fff;
+  padding-top: 52px;
+}
+.zhuanti3box .zhuanti3boxIn {
+  display: block;
+  width: 353px;
+  height: 85px;
+  line-height: 85px;
+  text-align: center;
+  color: #fff;
+  background: #059a9b;
+  margin: 0 auto ;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 38px;
+}
+.zhuanti3box .zhuanti3boxIn:hover {
+  color: #db961e;
+}
+.zhuanti3box2 {
+  width: 100%;
+  height: 624px;
+  position: relative;
+}
+.zhuanti3box2 .zhuanti3box2In {
+  position: absolute;
+  width: 1200px;
+  height: 624px;
+  left: 50%;
+  margin-left: -600px;
+  top: 0;
+}
+.zhuanti3box2 .zhuanti3box2In input {
+  display: block;
+  position: absolute;
+  left: 292px;
+  width: 524px;
+  height: 88px;
+  line-height: 88px;
+  font-size: 34px;
+  text-indent: .5em;
+  border: none;
+  z-index: 20;
+}
+.zhuanti3box2 .zhuanti3box2In .elm {
+  top: 55px;
+}
+.zhuanti3box2 .zhuanti3box2In .phNub {
+  top: 183px;
+}
+.zhuanti3box2 .zhuanti3box2In .ZT3yuyue {
+  position: absolute;
+  left: 150px;
+  top: 375px;
+  width: 902px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  background: #049999;
+  font-weight: bold;
+  border-radius: 8px;
+  z-index: 20;
+  font-size: 36px;
+  cursor: pointer;
+}
+.zhuanti3box2 .zhuanti3box2In .ZT3yuyue:hover {
+  color: red;
+}
+.zhuanti3box2 .zhuanti3box2In a {
+  position: absolute;
+  font-size: 36px;
+  background: #fff;
+  color: #049999;
+  left: 150px;
+  top: 520px;
+  width: 267px;
+  padding: 0 317px;
+  text-align: center;
+}
+.zhuanti3box2 .zhuanti3box2In a:hover {
+  color: red;
+}
