@@ -93,7 +93,7 @@ $(function(){
 
         dingzhiIng($('.order'));
         dingzhiIng($('.dingzhiTo'));
-        dingzhiIng($('.top2'));
+
 
         $('#dingzhi .offOn').on('click',function(){
             $('#bgima').css({display:'none'});
@@ -192,10 +192,10 @@ $(function(){
     });
 
     // to Top
-    $('.top3').on('click',function(){
+    $('.top6').on('click',function(){
         $(this).fadeOut('fast');
         $('html,body').animate({scrollTop:0},500,function(){
-            $($('.top3')).css({display:'block'})
+            $($('.top6')).css({display:'block'})
         })
     });
 

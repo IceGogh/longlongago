@@ -1,5 +1,5 @@
 $(function(){
-   // header-top Î¢ÐÅ¹«ÖÚºÅ
+   // header-top Î¢ï¿½Å¹ï¿½ï¿½Úºï¿½
    $('.header-top .iconWX').on('click',function(){
       $(this).children().slideDown();
    });
@@ -8,8 +8,4 @@ $(function(){
       $(this).slideUp('fast')
           .siblings().slideUp('fast');
    })
-
-
-
-
 });

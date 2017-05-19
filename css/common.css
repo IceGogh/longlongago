@@ -44,7 +44,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: SimSun;
+  font-family: Microsoft YaHei;
 }
 #bgima {
   width: 100%;
@@ -610,37 +610,45 @@ body {
 }
 .toTop {
   z-index: 180;
-  width: 72px;
-  border-radius: 4px;
+  width: 80px;
   position: fixed;
-  top: 200px;
+  top: 130px;
   right: 40px;
   cursor: pointer;
 }
 .toTop > a {
   display: block;
-  width: 72px;
-  height: 22px;
-  margin-bottom: 5px;
-  padding-top: 72px;
+  width: 80px;
+  height: 20px;
+  padding-top: 40px;
   text-align: center;
-  line-height: 22px;
+  line-height: 20px;
+  font-size: 15px;
   font-family: Arial;
   color: #141414;
   background-color: rgba(184, 184, 184, 0.4);
+  background-image: url("../images/toTop.png");
   background-repeat: no-repeat;
-  border: 1px #afafaf solid;
-  border-radius: 4px;
+  margin-bottom: 2px;
 }
-.toTop > a:hover {
-  color: red;
+.toTop > .top0:hover {
+  color: #fff;
+  background-position-x: -80px;
+  background-color: red;
 }
 .toTop .top1 {
-  background-image: url("../images/indexRight%20(3).png");
+  background-image: url("../images/totop11.png");
+  color: #fff;
 }
 .toTop .top2 {
-  background-image: url("../images/indexRight%20(2).png");
+  background-position-y: -60px;
 }
 .toTop .top3 {
-  background-image: url("../images/indexRight%20(1).png");
+  background-position-y: -120px;
+}
+.toTop .top4 {
+  background-position-y: -180px;
+}
+.toTop .top5 {
+  background-position-y: -240px;
 }

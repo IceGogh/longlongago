@@ -247,6 +247,7 @@
   line-height: 66px;
   background: #0A0A0A;
   filter: alpha(opacity=40);
+  opacity: .5;
   text-align: center;
   color: #fff;
   bottom: -90px;
