@@ -211,7 +211,7 @@ body {
 .header-top .index-lianjie a.iconWX {
   background-image: url("../images/icon%20(4).png");
   position: relative;
-  z-index: 500;
+  z-index: 5500;
 }
 .header-top .index-lianjie a.iconWX i {
   position: absolute;
@@ -233,6 +233,93 @@ body {
   border: 1px #777 dotted;
   display: none;
 }
+
+#header-nav {
+  position: relative;
+  height: 46px;
+  width: 100%;
+  z-index: 5000;
+  background: #00a6b9;
+}
+#header-nav .common-inner {
+  height: 46px;
+  line-height: 46px;
+  position: relative;
+}
+#header-nav .common-inner > div {
+  float: left;
+  height: 46px;
+  margin: 0 6px;
+}
+#header-nav .common-inner > div > a {
+  display: inline-block;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+  transition: all .5s;
+}
+#header-nav .common-inner > div .hoverA {
+  transform: translate(-4px, -4px);
+}
+#header-nav .common-inner .list-down {
+  height: 46px;
+  transform-style: preserve-3d;
+  transform-origin: top;
+}
+#header-nav .common-inner > div .order {
+  background: red;
+  width: 104px;
+  height: 33px;
+  border-radius: 15px 15px 15px 15px;
+  margin-top: 8px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  animation: highR 1s linear infinite;
+}
+@keyframes highR {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -9px;
+  }
+  100% {
+    top: 0;
+  }
+}
+#header-nav #menubox {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 46px;
+  width: 50%;
+  background: rgba(200, 200, 200, 0.9);
+  z-index: 5000;
+}
+#header-nav #menubox .lei {
+  padding: 0 10px;
+}
+#header-nav #menubox dd {
+  height:34px;
+  line-height:34px;
+}
+#header-nav #menubox dd a {
+  width: 34px;
+  height: 15px;
+  font-size: 14px;
+  color: #fff;
+  margin: 0 10px;
+}
+#header-nav #menubox dd a:hover {
+  color: #00a6b9;
+}
+
+
 .header-main {
   background-color: #00a6b9;
 }
@@ -493,9 +580,14 @@ body {
   color: red;
 }
 #bottom .jiabaologo {
-  font-size: 30px;
-  color: red;
-  transform: rotate(-14deg);
+  transform-origin: center center;
+  transform:rotate(9deg);
+  width:281px;
+  height:137px;
+  background:url("../images/dingzhibaoming_03.png") no-repeat;
+  position:relative;
+  top:-37px;
+
 }
 #bottom .bottomOp {
   width: 15%;
@@ -587,3 +679,5 @@ body {
 .toTop .top3 {
   background-image: url("../images/indexRight%20(1).png");
 }
+
+

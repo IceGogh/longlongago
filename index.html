@@ -14,10 +14,10 @@
     <link href="images/favicon.ico" rel="short icon"/>
     <link href="css/resetCss.css" rel="stylesheet"/>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-        <link href="IEcss/common.css" rel="stylesheet"/>
-        <link href="IEcss/IEindex.css" rel="stylesheet"/>
-        <script type="text/javascript" src="IEjs/IEcommon.js"></script>
-        <script type="text/javascript" src="IEjs/IEindex.js"></script>
+    <link href="IEcss/common.css" rel="stylesheet"/>
+    <link href="IEcss/IEindex.css" rel="stylesheet"/>
+    <script type="text/javascript" src="IEjs/IEcommon.js"></script>
+    <script type="text/javascript" src="IEjs/IEindex.js"></script>
     <script type="text/javascript"  src="js/common.js"></script>
     <script type="text/javascript"  src="js/index.js"></script>
 </head>
@@ -73,21 +73,76 @@
         </div>
     </div>
 </div>
-<div class="header-main">
+<div id="header-nav">
     <div class="common-inner">
-        <a href="index.html" target="_blank">首页</a>
-        <a href="#">全部分类</a>
-        <a href="htmls/products/chugui.html" target="_blank">整体橱柜</a>
-        <a href="htmls/products/yigui.html" target="_blank">整体衣柜</a>
-        <a href="htmls/products/mumen.html" target="_blank">嘉宝木门</a>
-        <a href="htmls/products/quanwu.html" target="_blank">全屋定制</a>
-        <a href="htmls/dingzhi.html" target="_blank">定制流程</a>
-        <a href="htmls/join.html" target="_blank">加盟嘉宝</a>
-        <a href="htmls/about.html" target="_blank">关于嘉宝</a>
-        <a href="#" class="order">
-            马上预约定制
-            <i></i>
-        </a>
+        <div>
+            <a href="../index.html">首页</a>
+        </div>
+        <div>
+            <a href="#" class="all-lei downmenu">全部分类</a>
+            <div id="menubox">
+                <dl class="lei">
+                    <dd>整体橱柜</dd>
+                    <dd>
+                        <a href="htmls/products/chugui.html">卧室</a>
+                        <a href="htmls/products/chugui.html">书房</a>
+                        <a href="htmls/products/chugui.html">客厅</a>
+                    </dd>
+                </dl>
+                <dl class="lei">
+                    <dd>整体衣柜</dd>
+                    <dd>
+                        <a href="htmls/products/yigui.html">卧室</a>
+                        <a href="htmls/products/yigui.html">书房</a>
+                        <a href="htmls/products/yigui.html">客厅</a>
+                    </dd>
+                </dl>
+                <dl class="lei">
+                    <dd>定制木门</dd>
+                    <dd>
+                        <a href="htmls/products/mumen.html">卧室</a>
+                        <a href="htmls/products/mumen.html">书房</a>
+                        <a href="htmls/products/mumen.html">客厅</a>
+                    </dd>
+                </dl>
+                <dl class="lei">
+                    <dd>全屋定制</dd>
+                    <dd>
+                        <a href="htmls/products/quanwu.html">卧室</a>
+                        <a href="htmls/products/quanwu.html">书房</a>
+                        <a href="htmls/products/quanwu.html">客厅</a>
+                        <a href="htmls/products/quanwu.html">卧室</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div>
+            <a href="htmls/products/chugui.html" class="  list-down">整体橱柜</a>
+        </div>
+        <div>
+            <a href="htmls/products/yigui.html" class="  list-down">整体衣柜</a>
+        </div>
+        <div>
+            <a href="htmls/products/mumen.html">嘉宝木门</a>
+        </div>
+        <div>
+            <a href="htmls/products/quanwu.html">全屋定制</a>
+        </div>
+        <div>
+            <a href="htmls/dingzhi.html" target="_blank">定制流程</a>
+        </div>
+        <div>
+            <a href="htmls/join.html" target="_blank">加盟嘉宝</a>
+        </div>
+        <div>
+            <a href="htmls/about.html" target="_blank">关于嘉宝</a>
+        </div>
+        <div>
+            <a href="#" class="order">
+                马上预约定制
+                <i></i>
+            </a>
+        </div>
     </div>
 </div>
 <div class="banner">
@@ -478,7 +533,6 @@
         <a href="http://www.shangceng.com.cn/">北京别墅装修</a>
         <a href="http://hz.lianjia.com/">杭州二手房</a>
         <a href="http://www.qizuang.com/">装修公司</a>
-
     </div>
 
 </div>
