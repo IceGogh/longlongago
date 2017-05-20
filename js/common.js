@@ -70,10 +70,12 @@ $(function(){
     //scroll listener
         window.onscroll = function(){
             var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
-            if(scrollT>550){
+            if(scrollT>500){
+                $('.toTop').slideDown('fast');
                 $('#bottom .daiyan img').css({height:'230px'});
                 $('#bottom').css({height:'100px', overflow:"visible"})
             }else{
+                $('.toTop').slideUp();
                 $('#bottom .daiyan img').css({height:0});
                 $('#bottom').css({height:'0px'})
             }

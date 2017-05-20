@@ -6,6 +6,8 @@
   height: 947px;
   overflow: hidden;
   position: relative;
+  background-color: #fff;
+  z-index: 2000;
 }
 #banner img {
   position: absolute;

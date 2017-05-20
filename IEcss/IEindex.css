@@ -11,6 +11,7 @@
   top: 0;
   left: 50%;
   margin-left: -960px;
+  overflow: hidden;
 }
 .banner .bannerImg a {
   position: absolute;
@@ -34,7 +35,7 @@
   line-height: 50px;
   text-align: center;
   background: #fff;
-  margin: 0 10px;
+  margin: 0 5px;
   float: left;
   cursor: pointer;
   background: rgba(200, 200, 200, 0.5);
@@ -145,6 +146,7 @@
   height: 252px;
   margin: 0 4px;
   float: left;
+  transition: all .3s;
 }
 .main2Inner ul li a {
   display: block;

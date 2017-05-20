@@ -320,7 +320,7 @@ body {
   color: #00a6b9;
 }
 #dingzhi {
-  z-index: 500;
+  z-index: 6500;
   background: rgba(163, 163, 163, 0.5);
   position: fixed;
   top: 0;
@@ -615,6 +615,7 @@ body {
   top: 130px;
   right: 40px;
   cursor: pointer;
+  display: none;
 }
 .toTop > a {
   display: block;

@@ -46,7 +46,7 @@ $(function(){
         )
     }
     //bannner
-    banAuto();
+    //banAuto();
     function banAuto() {
         var selLi = $('#banner ul li');
         $('#banner')
@@ -80,7 +80,7 @@ $(function(){
                 }
                 $('#banner ul li').removeClass('colorLi');
                 $('#banner ul li').eq(k).addClass('colorLi');
-            }, 3000);
+            }, 300000);
         }
         bannerT();
         selLi.hover(
