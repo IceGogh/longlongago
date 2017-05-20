@@ -10,19 +10,19 @@ $(function(){
     function callBack(data){
         var locUrl = window.location.href;
         var indexNub = locUrl.indexOf('ID=') +3;
-        //  »ñÈ¡µ±Ç°ÏêÇéÒ³±àºÅ
+        //  ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½
         var index = (locUrl.substr(indexNub)).slice(0,2);
 
 
-        //  ¸ù¾Ý±àºÅ£¬  Ìæ»»ÏêÇéÒ³ÄÚÈÝ
-            // ·Å´ó¾µ
+        //  ï¿½ï¿½ï¿½Ý±ï¿½Å£ï¿½  ï¿½æ»»ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½
+            // ï¿½Å´ï¿½
         $('#main .title').find('span').html(data[index][0]);
         $('.mainpic a').find('img').attr('src','images/' + data[index][1] + '/1.jpg');
         for(var i=0; i<$('.selectP ul li').length; i++){
             $('.selectP ul li').eq(i).find('img').attr('src','images/' + data[index][1] +'/'+(parseInt(i)+1) + '.jpg')
         }
 
-            //  ÉÌÆ·½éÉÜ
+            //  ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
         var $jieshao = $('.detail-r');
         removeImg();
         function removeImg(){
@@ -35,11 +35,11 @@ $(function(){
             $jieshao.find('.guige span').html(data[index][6]);
             $jieshao.find('.price span').html(data[index][7]);
         }
-            //  ÉÌÆ·ÏêÇé
+            //  ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 
         var Img = "";
-        var ImgCan = "images/" + data[index][1] + "/790%20(0).jpg";
-        for(var i=0; i<10; i++){
+        var ImgCan = "images/QW" + data[index][1] + "/790%20(0).jpg";
+        for(var i=0; i<13; i++){
             var ImgSrc = "images/" + data[index][1] + "/790%20(" + (1+parseInt(i)) + ").jpg";
             Img += '<img src="' + ImgSrc + '"/>';
         }

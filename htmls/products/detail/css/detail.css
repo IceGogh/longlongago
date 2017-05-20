@@ -233,6 +233,7 @@
 }
 #main .detailbox .detailinner > div img {
   width: 100%;
+  display: block;
 }
 #main .detailbox .title .hoverDetail {
   border-top-color: #5d72a8;
