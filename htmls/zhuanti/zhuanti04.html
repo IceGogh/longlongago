@@ -10,6 +10,93 @@
     <link href="css/zhuanti.css" rel="stylesheet"/>
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/common.js"></script>
+    <style>
+        .zhongjiang span {
+            margin-right:20px;
+            font-weight:bold;
+            color:red;
+            font-size:22px;
+            display:inline-block;
+            width:200px;
+            height:30px;
+            line-height:30px;
+            position:relative;
+            top:0;
+            left:0;
+        }
+        .transitionfor {
+            transition:all 3s ; transition-timing-function:cubic-bezier(0.5,0.5,0.95,1);
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var daojishi = document.getElementsByClassName('daojishi')[0];
+            var box0 = daojishi.getElementsByClassName('day')[0];
+            var box1 = daojishi.getElementsByClassName('hour')[0];
+            var box2 = daojishi.getElementsByClassName('min')[0];
+            var box3 = daojishi.getElementsByClassName('Sec')[0];
+            var TT=setInterval(function(){
+                var DateN = new Date();
+                var Month = DateN.getMonth()+1;
+                var NowD = DateN.getDate();
+                $('.gundong .month').html(Month);
+                $('.gundong .day').html(NowD);
+                var DateF = new Date('2017/06/18 23:59');
+                var distenceS = Math.floor((DateF - DateN)/1000);
+                var Top = $('.gundong > div ').css('top');
+
+                $('.gundong > div ').animate({'top':(parseInt(Top)-37)+'px'},function(){
+                    if(parseInt(Top)==-370){
+                        $('.gundong > div ').css('top',0);
+                    }
+                });
+
+                var Left = $('.zhongjiang span ').css('left');
+                $('.zhongjiang span').animate({'left':(parseInt(Left)-20)+'px'},function(){
+                    if(parseInt(Top)==-400){
+                        $('.zhongjiang span').css('left',0);
+                    }
+                });
+
+                var disDay = Math.floor(distenceS/(60*60*24));
+                var disHour =Math.floor(distenceS/(60*60)) -  disDay * 24;
+                var disMin = Math.floor(distenceS/60) - (disDay * 24 + disHour)*60;
+                var disSec = distenceS - ((disDay * 24 + disHour) *60 + disMin ) *60;
+
+                box0.innerHTML = disDay;
+                box1.innerHTML = disHour;
+                box2.innerHTML = disMin;
+                box3.innerHTML = disSec;
+            },1000);
+            // 转盘
+            var degPre = 0 ;
+            var flag = true;
+            $('.zpcenter').on('click',function(){
+                if(flag){
+                    flag = !flag;
+                    var Deg = Math.random()*360;
+
+                    degPre += Deg;
+                    $('.zp').addClass('transitionfor')
+                            .css({transform:'rotate('+ (400+parseInt(degPre)) +'deg)'});
+                    setTimeout(function(){
+                       var rls = confirm("详情请咨询客服，有咨询就有优惠哦");
+                        $('.zp').removeClass('transitionfor')
+                                .css({transform:'rotate(0)'});
+                        if(rls){
+                            flag = !flag;
+                        }else{
+                            flag = !flag;
+                        }
+
+                    },3100)
+
+                }
+            })
+
+        };
+
+    </script>
 </head>
 <body>
 <div class="header-topT">
@@ -138,62 +225,129 @@
     </div>
 </div>
 
-<div id="banner">
-    <img src="images/zhuanti04_01.jpg" title="嘉宝橱柜"/>
+<div id="banner" style="height:904px">
+    <img src="images/0528zhuanti04_01.jpg" title="嘉宝橱柜"/>
 </div>
 <div class="main">
-    <div class="zhuantiP0">
-        <div class="common-inner">
-            <p>
-                <img src="images/zhuanti04_04.jpg" title="嘉宝橱柜"/>
-                <div class="ZTbaoming">
-                    <input type="text" class="elm"/>
-                    <input type="text" class="phNub" maxlength="11"/>
-                    <input type="text" class="location"/>
-                    <div class="baomingBTN">免费预约定制</div>
-                </div>
-            </p>
-            <div class="mainBottom">
-                <img src="images/zhuanti04_07.jpg" title="嘉宝橱柜"/>
-                <img src="images/zhuanti04_08.jpg" title="嘉宝橱柜"/>
+    <div class="mainBottom" style="background:#fff;">
+        <div class="mainBottomInner">
+            <img src="images/0528zhuanti04_03.jpg"/>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" class="youhuiquan1"></a>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" class="youhuiquan2"></a>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" class="youhuiquan3"></a>
+        </div>
+    </div>
+    <div class="mainBottom" style="background:#fff;">
+        <div class="mainBottomInner">
+            <img src="images/0528zt04.jpg"/>
+            <a style="width:440px; height:230px;  top:227px; left:197px; padding-top:7px;">
+                <input class="elm"  type="text" placeholder="姓名" maxlength="8" style="width:435px; height:53px; font-size:16px; line-height:53px; text-indent: .8em;"/>
+
+                <input class="phNub"  type="text" placeholder="手机号" maxlength="11" style="width:435px; height:53px; font-size:16px; line-height:53px; text-indent: .8em; margin:15px 0;" />
+                <br/>
+                <input class="location" type="text" placeholder="地址(所在县市)" style="width:435px; height:53px; font-size:16px; line-height:53px; text-indent: .8em; margin-top:8px;"/>
+
+            </a>
+            <a    class="zhuanti04confirm" style="width:385px; height:67px; line-height: 67px; background:#fac728; top:597px; left:160px; text-align:center; color:red; font-size:20px;
+           font-weight:bold; word-spacing: .3em; border-radius: 5px;" >点我预约报名抽奖</a>
+            <div class="daojishi" style=" width:792px; height:200px; top:691px; left:360px;">
+                <div class="day"></div>
+                <div class="hour"></div>
+                <div class="min"></div>
+                <div class="Sec"></div>
             </div>
-        </p>
-    </div>
-    <div class="zhuantiP1">
-        <div class="common-inner">
-            <img src="images/zhuanti04_11.jpg" title="嘉宝橱柜"/>
+            <div class="gundong" style="position:absolute; width:400px; padding:20px 0 20px 50px; height:325px; top:280px; right:25px; background:#ee92bc; overflow: hidden">
+                <div>章先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>李女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>韩女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>吴先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>张　总<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>谢帅哥<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>赵经理<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>张小姐<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>章先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>李女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>韩女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>吴先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>张　总<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>谢帅哥<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>赵经理<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+                <div>张小姐<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
+
+
+            </div>
+
         </div>
     </div>
-    <div class="zhuantiP0">
-        <div class="common-inner">
-            <img src="images/zhuanti04_14.jpg" title="嘉宝橱柜"/>
-            <img src="images/zhuanti04_16.jpg" title="嘉宝橱柜"/>
-            <img src="images/zhuanti04_18.jpg" title="嘉宝橱柜"/>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK"  target="_blank"  class="ZTzixun"></a>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK"  target="_blank" class="ZTzixun ZTzixun1"></a>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK"  target="_blank" class="ZTzixun ZTzixun2"></a>
+    <div class="mainBottom" style="background:#fff; z-index: 10;">
+        <div class="mainBottomInner">
+            <img src="images/0528zt04zpBG_02.jpg"/>
+            <div class="zp" style="width:564px; height:564px; position:absolute; top:390px; left:303px; z-index: 20; background:url('images/0528zp_03.png') no-repeat center;">
+            </div>
+            <div class="zpcenter" style="position:absolute; z-index:30;top:520px; left:516px; width:136px; height:215px; background:url('images/zpcenter.png') no-repeat center; transform: rotate(0deg); cursor:pointer;"></div>
+            <div class="zhongjiang" style="position:absolute; padding-left:20px; width:656px; height:77px; background:#fff; z-index:30; line-height:77px; top:1054px; left:330px; overflow: hidden;">
+                <div style=" position:absolute; width:4400px; height:77px;">
+                    <span> 张×× 186****2514</span>
+                    <span> 李×× 136****7933</span>
+                    <span> 王×× 177****8846</span>
+                    <span> 曾×× 139****5513</span>
+                    <span> 邓×× 185****2055</span>
+                    <span> 田×× 188****3346</span>
+                    <span> 付×× 180****2575</span>
+                    <span> 谢×× 159****4436</span>
+                    <span> 林×× 155****3353</span>
+                    <span> 张×× 186****2514</span>
+                    <span> 李×× 136****7933</span>
+                    <span> 王×× 177****8846</span>
+                    <span> 曾×× 139****5513</span>
+                    <span> 邓×× 185****2055</span>
+                    <span> 田×× 188****3346</span>
+                    <span> 付×× 180****2575</span>
+                    <span> 谢×× 159****4436</span>
+                    <span> 林×× 155****3353</span>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="zhuantiP1">
-        <div class="common-inner">
-            <img src="images/zhuanti04_21.jpg" title="嘉宝橱柜"/>
+    <div class="mainBottom" style="background:#fff;">
+        <img src="images/0528zhuanti04_06.jpg"/>
+        <img src="images/0528zhuanti04_07.jpg"/>
+        <img src="images/0528zhuanti04_08.jpg"/>
+        <img src="images/0528zhuanti04_09.jpg"/>
+    <div class="mainBottomInner">
+        <img src="images/0528zhuanti04_10.jpg"/>
+        <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:494px; left:920px;"></a>
+    </div>
+    <div class="mainBottomInner">
+        <img src="images/0528zhuanti04_11.jpg"/>
+        <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:654px; left:920px; "></a>
+    </div>
+        <div class="mainBottomInner">
+            <img src="images/0528zhuanti04_12.jpg"/>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:760px; left:920px;"></a>
         </div>
+        <img src="images/0528zhuanti04_13.jpg"/>
+        <img src="images/0528zhuanti04_14.jpg"/>
+    <div class="mainBottomInner">
+        <img src="images/0528zhuanti04_15.jpg"/>
+        <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:239px; left:895px; "></a>
     </div>
-    <div class="mainBottom">
-        <img src="images/zhuanti04new_23.jpg" title="嘉宝橱柜"/>
-    </div>
-    <div class="zhuantiP00">
-        <div class="common-inner">
-            <p>
-                <img src="images/zhuanti04_26.jpg" title="嘉宝橱柜"/>
-                <img src="images/zhuanti04_27.jpg" title="嘉宝橱柜"/>
-                <img src="images/zhuanti04_28.jpg" title="嘉宝橱柜"/>
-                <img src="images/zhuanti04_29.jpg" title="嘉宝橱柜"/>
-                <img src="images/zhuanti04_30.jpg" title="嘉宝橱柜"/>
-            </p>
+        <div class="mainBottomInner">
+            <img src="images/0528zhuanti04_16.jpg"/>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:136px; left:895px;"></a>
         </div>
+        <img src="images/0528zhuanti04_17.jpg"/>
+        <img src="images/0528zhuanti04_18.jpg"/>
+        <img src="images/0528zhuanti04_19.jpg"/>
+        <img src="images/0528zhuanti04_20.jpg"/>
+        <img src="images/0528zhuanti04_21.jpg"/>
+        <img src="images/0528zhuanti04_22.jpg"/>
+        <img src="images/0528zhuanti04_23.jpg"/>
+        <img src="images/0528zhuanti04_24.jpg"/>
+        <img src="images/0528zhuanti04_25.jpg"/>
     </div>
-</div>
+
 </div>
     <div id="footer">
         <div class="box1 common-inner">
@@ -220,8 +374,8 @@
             <div class="ft-box">
                 <p>客服热线：<span>400-0188-608</span></p>
                 <p>值班时间：7 * 24 Hours</p>
-                <p>嘉宝给您最好的服务</p>
 <p>售后电话 : 0731 - 88334455</p>
+                <p>嘉宝给您最好的服务</p>
             </div>
             <div class="ft-box">
                 <div class="erweima"></div>

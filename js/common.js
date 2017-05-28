@@ -115,6 +115,7 @@ $(function(){
         BtnClick($('.buttonIN'));
         BtnClick($('.baomingBTN'));
         BtnClick($('.ZT3yuyue'));
+        BtnClick($('.zhuanti04confirm'));
 
 
         function BtnClick(btn){
