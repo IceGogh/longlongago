@@ -1,9 +1,10 @@
 $(function(){
-   // banner ÂÖ²¥
+   // banner ï¿½Ö²ï¿½
     var BannerTimer;
     var BannerTimer2;
     var i = 0;
     var BanBtn = $('.bannerBtn');
+    autoBanner();
     function autoBanner(){
         clearInterval(BannerTimer);
         BannerTimer = setInterval(function(){
@@ -17,36 +18,17 @@ $(function(){
                 .eq(i).addClass('banSelLi')
         },3000)
     }
-    //ÑÓ³Ù 2000 ms Ö´ÐÐ×Ô¶¯ÂÖ²¥
+    //ï¿½Ó³ï¿½ 2000 ms Ö´ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ö²ï¿½
     setTimeout(function(){
         autoBanner();
     },2000);
 
-    // banner Btn hover
-/*
-    BanBtn.find('li').hover(
-        function(){
-            clearInterval(BannerTimer);
-            i = $(this).index();
-            $('.banner a').fadeOut('fast');
-            $('.banner a').eq(i).fadeIn('fast');
-            $(this).addClass('banSelLi')
-                .siblings().removeClass('banSelLi')
-
-        },
-        function(){
-            $('.banner a').stop();
-            autoBanner();
-        }
-    )
-*/
     BanBtn.find('li')
         .on('mouseover',function(){
             var $this = $(this);
             BannerTimer2 = setTimeout(function(){
                 clearInterval(BannerTimer);
                 i = $this.index();
-                console.log(i)
                 $('.banner a').fadeOut('fast');
                 $('.banner a').eq(i).fadeIn('fast');
                 $this.addClass('banSelLi')

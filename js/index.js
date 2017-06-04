@@ -29,7 +29,7 @@ $(function(){
     }
     flShadow($('.flimages li'));
     flShadow($('.flmain'));
-    moveTo($('.flmain'));
+    moveTo($('.mainbox-small'));
     // main hover noteMoveto
     function moveTo(elm){
         elm.hover(
