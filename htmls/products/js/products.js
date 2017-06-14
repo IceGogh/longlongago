@@ -1,10 +1,10 @@
 $(function(){
-    //  ajax »ñÈ¡ js ÖÐ ¶ÔÓ¦ jsonµÄÊý¾Ý ¶¯Ì¬Éú³ÉÉÌÆ·ÁÐ±í
-        // »ñÈ¡µ±Ç°ÉÌÆ··ÖÀà chugui /  yigui / ....
+    //  ajax ï¿½ï¿½È¡ js ï¿½ï¿½ ï¿½ï¿½Ó¦ jsonï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½Ð±ï¿½
+        // ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ chugui /  yigui / ....
     var url = window.location.href;
     var urlWords = url.indexOf('products/') + 9;
     var urlWord = url.substr(urlWords);
-        //  È¥³ý .html ºó×º
+        //  È¥ï¿½ï¿½ .html ï¿½ï¿½×º
     var index = urlWord.indexOf('.html');
     var keyWord = urlWord.slice(0,index);
     var Json;
@@ -17,17 +17,17 @@ $(function(){
         }
     });
     function createItem(jsonData){
-        //  »ñÈ¡ ¶ÔÓ¦ jsonÎÄ¼þÖÐ ¶ÔÏó¸öÊý
+        //  ï¿½ï¿½È¡ ï¿½ï¿½Ó¦ jsonï¿½Ä¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var jsonLength = 0;
         for(var item in jsonData){
             jsonLength++;
         }
-        var showPage = 1;       // µ±Ç°ÏÔÊ¾Ò³Âë
-        var $page = Math.ceil(jsonLength/8);       //  ×Ü¹²Ò³ÂëÊýÁ¿
+        var showPage = 1;       // ï¿½ï¿½Ç°ï¿½ï¿½Ê¾Ò³ï¿½ï¿½
+        var $page = Math.ceil(jsonLength/8);       //  ï¿½Ü¹ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        // Ò³ÃæÏÔÊ¾
+        // Ò³ï¿½ï¿½ï¿½ï¿½Ê¾
         $('.ye .totleye').html($page);
-        //  Ñ­»·´´½¨
+        //  Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         loadItem(jsonData);
 
         function loadItem(jsonData){
@@ -45,11 +45,12 @@ $(function(){
                     '<div class="style">'+ jsonData[(i <=9 ? "0"+i : i)][0] +'</div>'+
                     '<div class="style2nd">'+ jsonData[(i <=9 ? "0"+i : i)][2]+'</div>'+
                     '</a>'
-            }
+            };
+            mainboxInner += '<a class="clearfix"></a>';
             $('.mainbox').html(mainboxInner);
             $('.ye .dangqian').html(showPage);
 
-            // hover shadows ( .product ÔÚ ajax ÖÐ¶¯Ì¬´´½¨)
+            // hover shadows ( .product ï¿½ï¿½ ajax ï¿½Ð¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½)
             function picFl(elm){
                 elm.hover(
                     function(){
@@ -64,7 +65,7 @@ $(function(){
 
         }
 
-        //  ÏÂÒ»Ò³
+        //  ï¿½ï¿½Ò»Ò³
         $('.ye .nextP').on('click',function(){
             showPage++;
             if(showPage > $page){
@@ -72,7 +73,7 @@ $(function(){
             }
             loadItem(jsonData);
         });
-        //  ÉÏÒ»Ò³
+        //  ï¿½ï¿½Ò»Ò³
         $('.ye .preP').on('click',function(){
             showPage--;
             if(showPage < 1){
@@ -80,7 +81,7 @@ $(function(){
             }
             loadItem(jsonData);
         });
-        // Ê×Ò³
+        // ï¿½ï¿½Ò³
         $('.ye .firstP').on('click',function(){
             showPage = 1;
             loadItem(jsonData);
