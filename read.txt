@@ -1,0 +1,17 @@
+branch£º mbmsys
+
+----------------
+complete signUp page 
+
+--- mysql  use "bigint" replace "int" for phoneID,
+--- html canvas cannot show in IE explorer , wait for change PHP create code-img or use mobile message test
+06/16
+
+
+----------------- 0618
+createCodeImg test ok (use $_SESSION)
+
+----------------- 0622
+complete signin & signup & $_SESSION['phone'] remember in index.php
+----------------- 0623
+add logout button use ajax and reload to index.php 

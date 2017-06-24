@@ -8,6 +8,7 @@
     <link href="../images/favicon.ico" rel="short icon"/>
     <link href="../IEcss/common.css" rel="stylesheet"/>
     <link href="../IEcss/IEindex.css" rel="stylesheet"/>
+    <link href="css/signup.css" rel="stylesheet"/>
     <link href="css/common2nd.css" rel="stylesheet"/>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
@@ -15,17 +16,9 @@
 <body>
 <div class="header-topT">
     <div class="common-inner">
-        <div class="welcome">
-            <p>
-                Hi,　
-
-                <?php
-include "php/logCheck.php";
-?>
-            </p>
-        </div>
+        <div class="welcome"> Hi, 欢迎来到 嘉宝橱柜 !</div>
         <div class="right">
-            <a href="dingzhi.html" target="_blank">帮助中心</a>|
+            <a href="../htmls/dingzhi.html" target="_blank">帮助中心</a>|
             <a class="shoucang">收藏嘉宝</a>|
             <a href="#" class="guanzhu">关注嘉宝</a>|
             <span>客服电话:</span>
@@ -46,120 +39,91 @@ include "php/logCheck.php";
                 <img src="../images/logo.png" title="嘉宝官网"/>
             </a>
         </div>
-        <div class="index-search">
-            <div>产品</div>
-            <form>
-                <input type="text"/>
-                <input type="button" value="搜索"/>
-            </form>
-            <p>
-                <a href="../htmls/products/mumen.html" target="_blank">木门</a>
-                <a href="../htmls/products/mumen.html" target="_blank">实木</a>
-                <a href="../htmls/products/yigui.html" target="_blank">多层</a>
-                <a href="../htmls/products/chugui.html" target="_blank">进口</a>
-                <a href="../htmls/products/chugui.html" target="_blank">欧式</a>
-            </p>
-        </div>
-        <div class="index-lianjie">
-            <a class="iconTM" href="https://jiabaochugui.tmall.com" target="_blank">天猫旗舰店</a>
-            <a class="iconJD" href="http://mall.jd.com/index-656949.html" target="_blank">京东旗舰店</a>
-            <a class="iconJD" href="http://mall.jd.com/index-672672.html" target="_blank">全屋定制店</a>
-            <a class="iconTB" href="https://shop105792262.taobao.com" target="_blank">淘宝直营店</a>
-            <a class="iconWX">
-                微信公众号
-                <i></i>
-                <span></span>
-            </a>
-        </div>
     </div>
 </div>
-<div id="header-nav">
+
+<div id="main">
     <div class="common-inner">
-        <div>
-            <a href="../index.html">首页</a>
-        </div>
-        <div>
-            <a href="#" class="all-lei downmenu">全部分类</a>
-            <div id="menubox">
-                <dl class="lei">
-                    <dd>整体橱柜</dd>
-                    <dd>
-                        <a href="products/chugui.html">卧室</a>
-                        <a href="products/chugui.html">书房</a>
-                        <a href="products/chugui.html">客厅</a>
-                    </dd>
-                </dl>
-                <dl class="lei">
-                    <dd>整体衣柜</dd>
-                    <dd>
-                        <a href="products/yigui.html">卧室</a>
-                        <a href="products/yigui.html">书房</a>
-                        <a href="products/yigui.html">客厅</a>
-                    </dd>
-                </dl>
-                <dl class="lei">
-                    <dd>定制木门</dd>
-                    <dd>
-                        <a href="products/mumen.html">卧室</a>
-                        <a href="products/mumen.html">书房</a>
-                        <a href="products/mumen.html">客厅</a>
-                    </dd>
-                </dl>
-                <dl class="lei">
-                    <dd>全屋定制</dd>
-                    <dd>
-                        <a href="products/quanwu.html">卧室</a>
-                        <a href="products/quanwu.html">书房</a>
-                        <a href="products/quanwu.html">客厅</a>
-                        <a href="products/quanwu.html">卧室</a>
-                    </dd>
-                </dl>
+        <div class="left"></div>
+        <div class="right">
+            <div class="inUP">
+                <a class="signintitle"  data-status="1">
+                    用户登陆
+                    <span class="selectSign"></span>
+                </a>
+                <a class="signuptitle"  data-status="0">
+                    注册会员
+                    <span></span>
+                </a>
             </div>
+            <form class="signin" action="php/signInfor.php" method="post">
+                <div class="formIN">
+                    <span class="phoneIDpre">请正确输入您的手机号码</span>
+                    <em>手机号码</em>
+                    <input type="tel" class="phoneID" name="phone" maxlength="11" minlength="11"/>
+                </div>
+                <div class="formIN">
+                    <span class="pswd2">密码位数不正确</span>
+                    <em>请确认密码</em>
+                    <input type="password" class="password3" name="password" maxlength="16" minlength="8">
+                </div>
+                <div class="formIN">
+                    <span class="yanzheng">验证码错误</span>
+                    <em>验证码</em>
+                    <input type="text" name="codes" class="codes" maxlength="4" >
+                    <img class="codeImg" src="php/createcode.php"/>
+                    <div class="recode">
+                        看不清?<br/>重新加载
+                    </div>
+                </div>
+                <div class="formIN">
+                    <input type="submit" name="submit" class="submit2" value="登录">
+                </div>
+            </form>
+            <form class="signup" action="php/signUpfor.php" method="post">
+                <div class="formIN">
+                    <span class="phoneIDpre">请正确输入您的手机号码</span>
+                    <em>手机号码</em>
+                    <input type="tel" class="phoneID" name="phone" maxlength="11" minlength="11"/>
+                </div>
+                <div class="formIN">
+                    <span class="pswd">请设置8~16位密码</span>
+                    <em>请设置密码</em>
+                    <input type="password" class="password"  maxlength="16"  minlength="8">
+
+                </div>
+                <div class="formIN">
+                    <span class="pswd2">两次密码不一致</span>
+                    <em>请确认密码</em>
+                    <input type="password" class="password2" name="password" maxlength="16" minlength="8">
+                    <span class="errorPW">两次密码不一致</span>
+                </div>
+                <div class="formIN">
+                    <span class="yanzheng">验证码错误</span>
+                    <em>验证码</em>
+                    <input type="text" name="codes" class="codes" maxlength="4" >
+                    <img class="codeImg" src="php/createcode.php"/>
+                    <div class="recode">
+                        看不清?<br/>重新加载
+                    </div>
+                </div>
+                <p>
+                    <label>
+                        <input type="checkbox" class="checkbox"/>
+
+                        我已阅读<a href="#">《湖南家居有限公司线上服务协议》</a>并同意所有条款
+
+                    </label>
+                </p>
+                <div class="formIN">
+                    <input class="submit" type="submit" name="submit" value="注册" disabled="disabled">
+                </div>
+            </form>
+
         </div>
-        <div>
-            <a href="products/chugui.html" class="  list-down">整体橱柜</a>
-        </div>
-        <div>
-            <a href="products/yigui.html" class="  list-down">整体衣柜</a>
-        </div>
-        <div>
-            <a href="products/mumen.html">嘉宝木门</a>
-        </div>
-        <div>
-            <a href="products/quanwu.html">全屋定制</a>
-        </div>
-        <div>
-            <a href="dingzhi.html" target="_blank">定制流程</a>
-        </div>
-        <div>
-            <a href="join.html" target="_blank">加盟嘉宝</a>
-        </div>
-        <div>
-            <a href="about.html" target="_blank">关于嘉宝</a>
-        </div>
-        <div>
-            <a href="#" class="order">
-                马上预约定制
-                <i></i>
-            </a>
-        </div>
+        <div class="clearfix"></div>
     </div>
 </div>
-
-    <div id="banner">
-        <img src="images/joinBanner.jpg"/>
-    </div>
-    <div id="main" class="joinW">
-        <p>
-            <img src="images/join01_03.jpg"/>
-            <img src="images/join01_06.jpg"/>
-            <img src="images/join01_08.jpg"/>
-            <img src="images/join01_10.jpg"/>
-            <img src="images/join01_11.jpg"/>
-        </p>
-    </div>
-
-
 <div id="footer">
     <div class="box1 common-inner">
         <div class="ft-box">
@@ -328,8 +292,7 @@ include "php/logCheck.php";
 </div>
 
 </body>
-<!--53kf 客服系统模块 -->
-<script>(function() {var _53code = document.createElement("script");_53code.src = "//tb.53kf.com/code/code/10133101/2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script>
+<script src="js/sign.js"></script>
 <!--百度400电话 -->
 <div style="height:0;display:none;overflow:hidden;">
     <script src="http://s22.cnzz.com/stat.php?id=5873751&web_id=5873751"></script>

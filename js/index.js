@@ -200,4 +200,18 @@ $(function(){
         })
     })();
 
+    //  退出会员登录状态
+    $(function(){
+        $('.closelog').on('click', function(){
+
+            $.ajax({
+                url: 'htmls/php/closelog.php',
+                type: 'post',
+                success: function(data){
+                    window.location.href ="http://localhost/Jiabao0519/index.html";
+                }
+            })
+        })
+    })
+
 });

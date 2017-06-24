@@ -37,6 +37,7 @@ img {
   outline: none;
   border: 0;
 }
+@bscolor :#00a6b9;
 body {
   background: #fff;
   position: relative;
@@ -59,6 +60,16 @@ body {
   .welcome {
     float:left;
     height:26px;
+
+    p{
+      a {
+        color:red;
+      }
+      a:hover{
+        color:@bscolor;
+        text-decoration: underline;
+      }
+    }
   }
 
   .common-inner{

@@ -60,6 +60,13 @@ body {
   float: left;
   height: 26px;
 }
+.header-topT .welcome p a {
+  color: red;
+}
+.header-topT .welcome p a:hover {
+  color: #00a6b9;
+  text-decoration: underline;
+}
 .header-topT .common-inner {
   position: relative;
 }

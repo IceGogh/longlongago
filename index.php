@@ -29,10 +29,32 @@
                 Hi,　
 
 <?php
-include "htmls/php/logCheck.php";
+session_start();
+// 判断 session 是否存在 避免 Notice 提示框
+@$_SESSION['phone'] = empty(!$_SESSION['phone']) ? $_SESSION['phone'] : false;
+
+if( $_SESSION['phone'] ){
+    echo "<span> 尊贵的嘉宝会员:　</span><a href=\"/\" target=\"_blank\"> $_SESSION[phone] </a><span class=\"closelog\" style=\"text-decoration: underline;cursor:pointer;\"> 退出 </span>";
+}else{
+    echo "欢迎来到 嘉宝橱柜 !<a href=\"htmls/sign.php\" target=\"_blank\"> [会员登录/注册] </a>";
+}
 ?>
             </p>
         </div>
+        <script>
+            $(function(){
+                $('.closelog').on('click', function(){
+
+                    $.ajax({
+                        url: 'htmls/php/closelog.php',
+                        type: 'post',
+                        success: function(data){
+                            window.location.href ="http://localhost/Jiabao0519/index.php";
+                        }
+                    })
+                })
+            })
+        </script>
         <div class="right">
             <a href="htmls/dingzhi.html" target="_blank">帮助中心</a>|
             <a class="shoucang">收藏嘉宝</a>|
