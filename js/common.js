@@ -215,7 +215,7 @@ $(function(){
         $(this).parent('i').css({
             display:'none'
         })
-    });
+    })
 
     // header-top ΢�Ź��ں�
     $('.header-top .iconWX').on('click',function(){
