@@ -19,3 +19,6 @@ add logout button use ajax and reload to index.php
 
 ------------------ 0624
 merge and recode (delete the css and js )
+
+------------------ 0625
+add signUp to verify the phoneID in client-side by JS and server-side by php
