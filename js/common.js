@@ -225,5 +225,15 @@ $(function(){
         ev.stopPropagation();
         $(this).slideUp('fast')
             .siblings().slideUp('fast');
-    })
+    });
+
+
+    //百度统计数据
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?16b1a369d1392d8f7e8978b592e0139f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 });
