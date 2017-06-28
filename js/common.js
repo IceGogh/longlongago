@@ -105,9 +105,9 @@ $(function(){
 
 
         //submit info
-        function submitInfo(name, tel, loupan, mianji ){
-            window.open("http://jiabao.dasn.com.cn/index.php/calltel/dooperate?name=" + name + "&tel=" + tel + "&loupan=" + loupan + "&mianji=" + mianji + "&content=" + document.title + "&url=" + location.href + "&sourceid=" + 1);
-        }
+    function submitInfo(name, tel, loupan, mianji ){
+        window.open("http://localhost/Jiabao0519/htmls/php/datacollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href );
+    }
 
         BtnClick($('#confirm'));
         BtnClick($('.DZBtn'));

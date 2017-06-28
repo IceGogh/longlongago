@@ -22,3 +22,6 @@ merge and recode (delete the css and js )
 
 ------------------ 0625
 add signUp to verify the phoneID in client-side by JS and server-side by php
+
+------------------ 0628
+test dataGetting ok, wait dataview by admin page
