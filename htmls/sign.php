@@ -6,7 +6,7 @@
     <meta name="Keywords" content="定制衣柜,定制家具,全屋家具定制,家具,橱柜,嘉宝橱柜" />
     <meta name="Description" content="定制衣柜品牌嘉宝橱柜官方全屋定制家具网上商城,定制衣柜及其配套定制家具直销网,为客户提供家具、衣柜、整体衣柜、榻榻米、书柜等全屋家具定制,及五大免费家具定制测量" />
     <link href="../images/favicon.ico" rel="short icon"/>
-    <link href="../IEcss/common.css" rel="stylesheet"/>
+    <link href="../css/common.css" rel="stylesheet"/>
     <link href="../IEcss/IEindex.css" rel="stylesheet"/>
     <link href="css/signup.css" rel="stylesheet"/>
     <link href="css/common2nd.css" rel="stylesheet"/>
@@ -41,7 +41,6 @@
         </div>
     </div>
 </div>
-
 <div id="main">
     <div class="common-inner">
         <div class="left"></div>
@@ -60,7 +59,7 @@
                 <div class="formIN">
                     <span class="phoneIDpre">请正确输入您的手机号码</span>
                     <em>手机号码</em>
-                    <input type="tel" class="phoneID" name="phone" maxlength="11" minlength="11"/>
+                    <input type="tel" class="phoneID0" name="phone" maxlength="11" minlength="11"/>
                 </div>
                 <div class="formIN">
                     <span class="pswd2">密码位数不正确</span>
@@ -82,6 +81,7 @@
             </form>
             <form class="signup" action="php/signUpfor.php" method="post">
                 <div class="formIN">
+                    <span class="phoneIDpre0">当前用户已存在<!--<a href="/" style="text-decoration: underline; color:teal;">[忘记密码?]</a>--></span>
                     <span class="phoneIDpre">请正确输入您的手机号码</span>
                     <em>手机号码</em>
                     <input type="tel" class="phoneID" name="phone" maxlength="11" minlength="11"/>
@@ -292,6 +292,9 @@
 </div>
 
 </body>
+<?php
+include "php/phoneList.php";
+?>
 <script src="js/sign.js"></script>
 <!--百度400电话 -->
 <div style="height:0;display:none;overflow:hidden;">

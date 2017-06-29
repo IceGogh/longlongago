@@ -11,23 +11,30 @@ $('#main .formIN ').on( 'blur','input' ,function(){
 
 //验证输入是否符合规范
     //  submit 哨兵值
+
+    var sumbitFlag0 = false;
     var sumbitFlag1 = false;
     var sumbitFlag2 = false;
     var sumbitFlag3 = false;
     var sumbitFlag4 = false;
+    var sumbitFlag5 = false;
 
 //  帐号
+
+ // 注册部分
 $('.phoneID').on('blur',function(){
 
     function defeat(elm){
-        $(this).css({ borderColor:'red'});
+        $('.phoneID').css({ borderColor:'red'});
         $('.phoneIDpre').css({display:'block'});
+        $('.phoneIDpre0').css({display:'none'});
         sumbitFlag1 = false;
     }
-
-    if($(this).val().length === 11){
+    var val = $(this).val();
+    if(val.length === 11){
 
         if( (/^1[34578]\d{9}$/.test( $(this).val() ) ) ){
+
             $(this).css({ borderColor:'#bbb'});
             $('.phoneIDpre').css({display:'none'});
             sumbitFlag1 = true;
@@ -36,7 +43,33 @@ $('.phoneID').on('blur',function(){
         }
     }else{
         defeat($('.phoneID'));
-    }
+    };
+
+    // 判断帐号是否已经注册
+    (function(){
+        var i = List.length;
+        while(i--){
+
+            if(List[i] == val){
+                sumbitFlag0 = false;
+                $('.phoneID').css({ borderColor:'red'});
+                $('.phoneIDpre0').css({display:'block'});
+                return;
+            }
+        }
+        sumbitFlag0 = true;
+        $('.phoneID').css({ borderColor:'#bbb'});
+        $('.phoneIDpre0').css({display:'none'});
+    })();
+    issueSubmit();
+});
+    //登录部分
+$('.phoneID0').on('blur', function(){
+   if($(this).val().length ===11 ){
+       sumbitFlag5 = true;
+   }else{
+       sumbitFlag5 = false;
+   }
 });
 
 //  密码
@@ -68,8 +101,9 @@ $('.password2').on('blur',function(){
 // recode  刷新验证码
 $('.codeImg').on('click', function(){
     $(this).attr('src','php/createcode.php');
-    console.log(sumbitFlag1,sumbitFlag2,sumbitFlag3,sumbitFlag4)
+    console.log(sumbitFlag0)
 });
+
 $('.recode').on('click', function(){
    $('.codeImg').trigger('click');
 });
@@ -95,6 +129,7 @@ $('.checkbox').on('click', function(){
 // 判断注册信息是否完整 符合规范
 function issueSubmit(){
     if(
+        sumbitFlag0 &&
         sumbitFlag1 &&
         sumbitFlag2 &&
         sumbitFlag3 &&
@@ -109,12 +144,13 @@ function issueSubmit(){
             .attr({disabled:'disabled'})
     };
 
-    if( sumbitFlag1){
+    if( sumbitFlag5){
+
         $('.submit2')
             .css({background:'#00a6b9',cursor:'pointer'})
             .removeAttr('disabled')
     }else{
-        $('.submit')
+        $('.submit2')
             .css({background:'#ccc',cursor:'not-allowed'})
             .attr({disabled:'disabled'})
     }

@@ -105,9 +105,10 @@ $(function(){
 
 
         //submit info
-    function submitInfo(name, tel, loupan, mianji ){
-        window.open("http://localhost/Jiabao0519/htmls/php/datacollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href );
-    }
+        function submitInfo(name, tel, loupan, mianji ){
+            window.open("http://localhost/Jiabao0519/htmls/php/datacollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href );
+            window.open("http://localhost/Jiabao0519/htmls/php/datacollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href );
+        }
 
         BtnClick($('#confirm'));
         BtnClick($('.DZBtn'));
@@ -225,5 +226,18 @@ $(function(){
         ev.stopPropagation();
         $(this).slideUp('fast')
             .siblings().slideUp('fast');
-    })
+    });
+
+
+    //  退出会员登录状态
+        $('.closelog').on('click', function(){
+
+            $.ajax({
+                url: 'http://localhost/Jiabao0519/htmls/php/closelog.php',
+                type: 'post',
+                success: function(data){
+                    window.location.href ="http://localhost/Jiabao0519/index.html";
+                }
+            })
+        })
 });
