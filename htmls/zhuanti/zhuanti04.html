@@ -2,103 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>嘉宝橱柜官方网站</title>
+    <title>嘉宝橱柜官方网站[专题:13周年]</title>
     <meta name="Keywords" content="定制衣柜,定制家具,全屋家具定制,家具,橱柜,嘉宝橱柜" />
     <meta name="Description" content="定制衣柜品牌嘉宝橱柜官方全屋定制家具网上商城,定制衣柜及其配套定制家具直销网,为客户提供家具、衣柜、整体衣柜、榻榻米、书柜等全屋家具定制,及五大免费家具定制测量" />
     <link href="../../images/favicon.ico" rel="short icon"/>
     <link href="../../IEcss/common.css" rel="stylesheet"/>
-    <link href="../../IEcss/IEindex.css" rel="stylesheet"/>
     <link href="css/zhuanti.css" rel="stylesheet"/>
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/common.js"></script>
-    <script type="text/javascript" src="//s.union.360.cn/165944.js" async defer></script>
+    <!--<script type="text/javascript" src="//s.union.360.cn/165944.js" async defer></script>-->
+    <script>
+        $(function(){
+            function hoverOff(elm){
+                elm.hover(
+                        function(){
+                            $(this).find('img').eq(0).fadeOut();
+                            $(this).find('img').eq(1).fadeIn();
+                        },
+                        function(){
+                            $(this).find('img').eq(1).fadeOut();
+                            $(this).find('img').eq(0).fadeIn();
+                        }
+                )
+            }
+            hoverOff($('.youhui1_1'));
+            hoverOff($('.youhui2_1'));
+            hoverOff($('.quanwu1-1'));
+            hoverOff($('.quanwu2-1'));
+            hoverOff($('.quanwu3-1'));
+            hoverOff($('.quanwu4-1'));
+
+        })
+    </script>
     <style>
-        .zhongjiang span {
-            margin-right:20px;
-            font-weight:bold;
-            color:red;
-            font-size:22px;
-            display:inline-block;
-            width:200px;
-            height:30px;
-            line-height:30px;
-            position:relative;
-            top:0;
-            left:0;
-        }
-        .transitionfor {
-            transition:all 3s ; transition-timing-function:cubic-bezier(0.5,0.5,0.95,1);
+        .main {background:#fff;}
+        @keyframes banner {
+            0% {top:20px;}
+            50% {top:100px;}
+            100% {top:20px;}
         }
     </style>
-    <script>
-        window.onload = function(){
-            var daojishi = document.getElementsByClassName('daojishi')[0];
-            var box0 = daojishi.getElementsByClassName('day')[0];
-            var box1 = daojishi.getElementsByClassName('hour')[0];
-            var box2 = daojishi.getElementsByClassName('min')[0];
-            var box3 = daojishi.getElementsByClassName('Sec')[0];
-            var TT=setInterval(function(){
-                var DateN = new Date();
-                var Month = DateN.getMonth()+1;
-                var NowD = DateN.getDate();
-                $('.gundong .month').html(Month);
-                $('.gundong .day').html(NowD);
-                var DateF = new Date('2017/06/18 23:59');
-                var distenceS = Math.floor((DateF - DateN)/1000);
-                var Top = $('.gundong > div ').css('top');
-
-                $('.gundong > div ').animate({'top':(parseInt(Top)-37)+'px'},function(){
-                    if(parseInt(Top)==-370){
-                        $('.gundong > div ').css('top',0);
-                    }
-                });
-
-                var Left = $('.zhongjiang span ').css('left');
-                $('.zhongjiang span').animate({'left':(parseInt(Left)-20)+'px'},function(){
-                    if(parseInt(Top)==-400){
-                        $('.zhongjiang span').css('left',0);
-                    }
-                });
-
-                var disDay = Math.floor(distenceS/(60*60*24));
-                var disHour =Math.floor(distenceS/(60*60)) -  disDay * 24;
-                var disMin = Math.floor(distenceS/60) - (disDay * 24 + disHour)*60;
-                var disSec = distenceS - ((disDay * 24 + disHour) *60 + disMin ) *60;
-
-                box0.innerHTML = disDay;
-                box1.innerHTML = disHour;
-                box2.innerHTML = disMin;
-                box3.innerHTML = disSec;
-            },1000);
-            // 转盘
-            var degPre = 0 ;
-            var flag = true;
-            $('.zpcenter').on('click',function(){
-                if(flag){
-                    flag = !flag;
-                    var Deg = Math.random()*360;
-
-                    degPre += Deg;
-                    $('.zp').addClass('transitionfor')
-                            .css({transform:'rotate('+ (400+parseInt(degPre)) +'deg)'});
-                    setTimeout(function(){
-                       var rls = confirm("详情请咨询客服，有咨询就有优惠哦");
-                        $('.zp').removeClass('transitionfor')
-                                .css({transform:'rotate(0)'});
-                        if(rls){
-                            flag = !flag;
-                        }else{
-                            flag = !flag;
-                        }
-
-                    },3100)
-
-                }
-            })
-
-        };
-
-    </script>
 </head>
 <body>
 <div class="header-topT">
@@ -227,236 +170,282 @@
     </div>
 </div>
 
-<div id="banner" style="height:904px">
-    <img src="images/0528zhuanti04_01.jpg" title="嘉宝橱柜"/>
+<div id="banner">
+    <img src="images/zhuanti04_banner04.jpg" title="嘉宝橱柜"/>
+    <img style="top:20px; margin-left:-460px; z-index:20; animation:banner 2s infinite linear;" src="images/zhuanti04_banner04inner.png"/>
 </div>
 <div class="main">
     <div class="mainBottom" style="background:#fff;">
-        <div class="mainBottomInner">
-            <img src="images/0528zhuanti04_03.jpg"/>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" class="youhuiquan1"></a>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" class="youhuiquan2"></a>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" class="youhuiquan3"></a>
+        <img src="images/zhuanti04_main1.jpg" style="margin-left:-250px;"/>
+        <div style="width:1310px; height:400px; margin:90px auto; position:relative;">
+
+                <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b.w14210285-16427099568.5.7a81a7f7v2l2ea&id=551968598861&skuId=3541699122036&scene=taobao_shop" target="_blank" style="position:absolute; left:0; top:0; width:628px; height:376px; cursor:pointer;" class="youhui1_1">
+                    <img src="images/zhuanti04_youhui%20(1).jpg"  style="margin-left:0; left:0;"/>
+                    <img src="images/zhuanti04_youhuiS%20(1).jpg" style="display:none; margin-left:0; left:0; position:absolute;"/>
+                </a>
+                <a  href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="position:absolute; right:0; top:0;  width:628px; height:376px; cursor:pointer;" class="youhui2_1">
+                    <img src="images/zhuanti04_youhui%20(2).jpg" style="margin-left:0; left:0;"/>
+                    <img src="images/zhuanti04_youhuiS%20(2).jpg" style="display:none; margin-left:0; left:0;  position:absolute;"/>
+                </a>
         </div>
+        <img src="images/zhuanti04_main2.jpg" style="margin-left:-238px;"/>
     </div>
     <div class="mainBottom" style="background:#fff;">
-        <div class="mainBottomInner">
-            <img src="images/0528zt04.jpg"/>
-            <a style="width:440px; height:230px;  top:227px; left:197px; padding-top:7px;">
-                <input class="elm"  type="text" placeholder="姓名" maxlength="8" style="width:435px; height:53px; font-size:16px; line-height:53px; text-indent: .8em;"/>
-
-                <input class="phNub"  type="text" placeholder="手机号" maxlength="11" style="width:435px; height:53px; font-size:16px; line-height:53px; text-indent: .8em; margin:15px 0;" />
-                <br/>
-                <input class="xiaoqu" type="text" placeholder="小区名称" style="width:435px; height:53px; font-size:16px; line-height:53px; text-indent: .8em; margin-top:8px;"/>
-                <span style="background:#fac90b; color:red; display:inline-block; position:absolute; top:164px; left:-131px; height:58px; line-height:58px; font-size:22px; font-weight:bold; text-align:center;">*楼盘地址</span>
-
-
+        <img src="images/zhuanti04_main3_02.jpg"/>
+        <img src="images/zhuanti04_main4.jpg" style="margin:50px 0 100px -303px;"/>
+    </div>
+    <div class="common-inner" style="width:1275px;">
+        <div style="width:1275px; height:720px; background:#fff;">
+            <a href="../products/quanwu.html" style="width:396px; height:619px; float:left;  position:relative;" class="quanwu1-1">
+                <img src="images/zhuanti04_main5-1%20(2).jpg"/>
+                <img src="images/zhuanti04_main5-0 (1).jpg" style="display:none; position:absolute; top:0; left:0;"/>
             </a>
-            <a    class="zhuanti04confirm" style="width:385px; height:67px; line-height: 67px; background:#fac728; top:597px; left:160px; text-align:center; color:red; font-size:20px;
-           font-weight:bold; word-spacing: .3em; border-radius: 5px;" >点我预约报名抽奖</a>
-            <div class="daojishi" style=" width:792px; height:200px; top:691px; left:360px;">
-                <div class="day"></div>
-                <div class="hour"></div>
-                <div class="min"></div>
-                <div class="Sec"></div>
-            </div>
-            <div class="gundong" style="position:absolute; width:400px; padding:20px 0 20px 50px; height:325px; top:280px; right:25px; background:#ee92bc; overflow: hidden">
-                <div>章先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>李女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>韩女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>吴先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>张　总<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>谢帅哥<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>赵经理<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>张小姐<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>章先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>李女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>韩女士<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>吴先生<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>张　总<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>谢帅哥<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>赵经理<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-                <div>张小姐<span class="month" style="margin-left:30px;"></span>月<span class="day"></span>日　已预约报名</div>
-
-
+            <div style="width:411px; height:619px; float:left;  margin:0 22px;">
+                <a  href="../products/chugui.html" style="display:block; position:relative; width:100%; height:297px;"  class="quanwu2-1">
+                    <img src="images/zhuanti04_main5-1 (3).jpg"/>
+                    <img src="images/zhuanti04_main5-0 (3).png" style="display:none; position:absolute; top:0; left:0;"/>
+                </a>
+                <a  href="../products/mumen.html" style=" display:block; position:relative; width:100%; height:297px;  margin-top:22px;" class="quanwu3-1">
+                    <img src="images/zhuanti04_main5-1 (1).jpg"/>
+                    <img src="images/zhuanti04_main5-0 (1).png" style="display:none; position:absolute; top:0; left:0;"/>
+                </a>
             </div>
 
+            <a  href="../products/quanwu.html" style="width:417px; height:619px; float:left; position:relative;" class="quanwu4-1">
+                <img src="images/zhuanti04_main5-1.jpg"/>
+                <img src="images/zhuanti04_main5-0 (2).png" style="display:none; position:absolute; top:0; left:0;"/>
+            </a>
         </div>
     </div>
-    <div class="mainBottom" style="background:#fff; z-index: 10;">
-        <div class="mainBottomInner">
-            <img src="images/0528zt04zpBG_02.jpg"/>
-            <div class="zp" style="width:564px; height:564px; position:absolute; top:390px; left:303px; z-index: 20; background:url('images/0528zp_03.png') no-repeat center;">
-            </div>
-            <div class="zpcenter" style="position:absolute; z-index:30;top:520px; left:516px; width:136px; height:215px; background:url('images/zpcenter.png') no-repeat center; transform: rotate(0deg); cursor:pointer;"></div>
-            <div class="zhongjiang" style="position:absolute; padding-left:20px; width:656px; height:77px; background:#fff; z-index:30; line-height:77px; top:1054px; left:330px; overflow: hidden;">
-                <div style=" position:absolute; width:4400px; height:77px;">
-                    <span> 张×× 186****2514</span>
-                    <span> 李×× 136****7933</span>
-                    <span> 王×× 177****8846</span>
-                    <span> 曾×× 139****5513</span>
-                    <span> 邓×× 185****2055</span>
-                    <span> 田×× 188****3346</span>
-                    <span> 付×× 180****2575</span>
-                    <span> 谢×× 159****4436</span>
-                    <span> 林×× 155****3353</span>
-                    <span> 张×× 186****2514</span>
-                    <span> 李×× 136****7933</span>
-                    <span> 王×× 177****8846</span>
-                    <span> 曾×× 139****5513</span>
-                    <span> 邓×× 185****2055</span>
-                    <span> 田×× 188****3346</span>
-                    <span> 付×× 180****2575</span>
-                    <span> 谢×× 159****4436</span>
-                    <span> 林×× 155****3353</span>
-                </div>
-            </div>
+    <div style="background:#9C9C9C; height:430px; width:100%; margin-top:60px;">
+        <div class="common-inner" style="width:1275px">
+            <img src="images/zhuanti04_mian7.png" style="position:absolute; top:-110px; left:0; "/>
+            <video src="http://cloud.video.taobao.com/play/u/3244903357/p/1/e/6/t/1/50011842386.mp4" style="width:586px; height:418px; position:absolute; top:0; right:0;" controls="controls" autoplay="autoplay">您的浏览器不支持此种视频格式。</video>
+        </div>
+    </div>
+    <div style="width:100%; height:2920px; background:url('images/zhuanti04_main8.jpg'); background-attachment: fixed;">
+        <div class="mainBottom">
+            <img src="images/zhuanti04_mian9.png" style="margin:0 0  100px -652px;"/>
+            <img src="images/zhuanjti04_main10%20(1).png" style="margin:100px 0  100px -652px;"/>
+            <img src="images/zhuanjti04_main10%20(2).png" style="margin:100px 0  100px -652px;"/>
+            <img src="images/zhuanjti04_main10%20(3).png" style="margin:100px 0  100px -652px;"/>
+            <img src="images/zhuanjti04_main10%20(4).png" style="margin:100px 0  100px -652px;"/>
+        </div>
+    </div>
 
+
+<!--衣柜-->
+    <div class="mainBottom" style="position:relative;">
+        <a href="../products/detail/yiguiDetail.html?ID=05" target="_blank" style="position: static;">
+            <img src="images/zhuanti04_main10%20(4).jpg"/>
+        </a>
+    </div>
+    <div class="common-inner" style="width:1267px; margin:80px auto;">
+        <img src="images/zhuanti04_main11 (1).jpg"/>
+        <a href="../products/detail/yiguiDetail.html?ID=01" target="_blank" style="position: absolute; top:0; left:0px;  width:400px; height:513px;"></a>
+        <a href="../products/detail/yiguiDetail.html?ID=02" target="_blank" style="position: absolute; top:0; left:432px; width:400px; height:513px;"></a>
+        <a href="../products/detail/quanwuDetail.html?ID=03" target="_blank" style="position: absolute; top:0; left:862px; width:400px; height:513px;"></a>
+    </div>
+    <div class="common-inner" style="width:1267px; margin:80px auto;">
+        <img src="images/zhuanti04_main11 (2).jpg"/>
+        <a href="../products/detail/yiguiDetail.html?ID=02" target="_blank" style="position: absolute; top:0; left:0px;  width:400px; height:513px;"></a>
+        <a href="../products/detail/yiguiDetail.html?ID=01" target="_blank" style="position: absolute; top:0; left:432px; width:400px; height:513px;"></a>
+        <a href="../products/yigui.html" target="_blank" style="position: absolute; top:0; left:862px; width:400px; height:513px;"></a>
+    </div>
+
+
+<!--全屋-->
+    <div class="mainBottom" style="position:relative;">
+        <a href="../products/detail/quanwuDetail.html?ID=02" target="_blank" style="position: static;">
+            <img src="images/zhuanti04_main10 (1).jpg"/>
+        </a>
+    </div>
+    <div class="common-inner" style="width:1267px; margin:80px auto;">
+        <img src="images/zhuanti04_main13 (2).jpg"/>
+        <a href="../products/detail/yiguiDetail.html?ID=01" target="_blank" style="position: absolute; top:0; left:0px;  width:1267px; height:618px;"></a>
+
+    </div>
+    <div class="common-inner" style="width:1267px; margin:80px auto;">
+        <img src="images/zhuanti04_main13 (1).jpg"/>
+        <a href="../products/detail/yiguiDetail.html?ID=02" target="_blank" style="position: absolute; top:0; left:0px;  width:1267px;height:617px;"></a>
+
+    </div>
+
+
+
+
+    <!--橱柜-->
+    <div class="mainBottom" style="position:relative;">
+        <a href="../products/detail/chuguiDetail.html?ID=02" target="_blank" style="position: static;">
+            <img src="images/zhuanti04_main10 (2).jpg"/>
+        </a>
+    </div>
+    <div class="common-inner" style="width:1267px; margin:80px auto;">
+        <img src="images/zhuanti04_main12 (1).jpg"/>
+        <a href="../products/detail/chuguiDetail.html?ID=02" target="_blank" style="position: absolute; top:0; left:0px;  width:400px; height:513px;"></a>
+        <a href="../products/detail/chuguiDetail.html?ID=06" target="_blank" style="position: absolute; top:0; left:432px; width:400px; height:513px;"></a>
+        <a href="../products/detail/chuguiDetail.html?ID=15" target="_blank" style="position: absolute; top:0; left:862px; width:400px; height:513px;"></a>
+    </div>
+    <div class="common-inner" style="width:1267px; margin:80px auto;">
+        <img src="images/zhuanti04_main12 (2).jpg"/>
+        <a href="../products/detail/chuguiDetail.html?ID=13" target="_blank" style="position: absolute; top:0; left:0px;  width:400px; height:513px;"></a>
+        <a href="../products/detail/chuguiDetail.html?ID=14" target="_blank" style="position: absolute; top:0; left:432px; width:400px; height:513px;"></a>
+        <a href="../products/detail/chuguiDetail.html?ID=08" target="_blank" style="position: absolute; top:0; left:862px; width:400px; height:513px;"></a>
+    </div>
+
+
+
+
+<!--榻榻米-->
+<div class="mainBottom" style="position:relative;">
+    <a href="../products/detail/quanwuDetail.html?ID=09" target="_blank" style="position: static;">
+        <img src="images/zhuanti04_main10 (3).jpg"/>
+    </a>
+</div>
+<div class="common-inner" style="width:1267px; margin:80px auto;">
+    <img src="images/zhuanti04_main13%20(4).jpg"/>
+    <a href="../products/detail/quanwuDetail.html?ID=09" target="_blank" style="position: absolute; top:0; left:0px;  width:1267px; height:618px;"></a>
+
+</div>
+<div class="common-inner" style="width:1267px; margin:80px auto;">
+    <img src="images/zhuanti04_main13%20(3).jpg"/>
+    <a href="../products/detail/quanwuDetail.html?ID=12" target="_blank" style="position: absolute; top:0; left:0px;  width:608px;height:617px; "></a>
+    <a href="../products/detail/quanwuDetail.html?ID=10" target="_blank" style="position: absolute; top:0; left:656px;  width:608px;height:617px; "></a>
+
+</div>
+
+
+<!--木门-->
+<div class="mainBottom" style="position:relative;">
+    <a href="../products/detail/mumenDetail.html?ID=07" target="_blank" style="position: static;">
+        <img src="images/zhuanti04_main11 (1).png"/>
+    </a>
+</div>
+<div class="common-inner" style="width:1267px; margin:80px auto;">
+    <img src="images/zhaunti04_14 (2).png"/>
+    <a href="../products/detail/mumenDetail.html?ID=08" target="_blank" style="position: absolute; top:0; left:0px;  width:1267px; height:618px;"></a>
+
+</div>
+<div class="common-inner" style="width:1267px; margin:80px auto;">
+    <img src="images/zhaunti04_14 (1).png"/>
+    <a href="../products/detail/mumenDetail.html?ID=05" target="_blank" style="position: absolute; top:0; left:0px;  width:608px;height:617px; "></a>
+    <a href="../products/detail/mumenDetail.html?ID=02" target="_blank" style="position: absolute; top:0; left:656px;  width:608px;height:617px; "></a>
+
+</div>
+
+
+
+<div class="mainBottom">
+    <img src="images/zhuanti04_15.jpg"/>
+</div>
+
+</div>
+
+
+<div id="footer">
+    <div class="box1 common-inner">
+        <div class="ft-box">
+            <a>
+                新手指南
+                <i></i>
+            </a>
+            <a href="../../htmls/about.html">关于嘉宝<i></i></a>
+            <a href="../../htmls/join.html">加盟嘉宝</a>
+            <a href="../../htmls/dingzhi.html" class="dingzhiTo">现在定制</a>
+        </div>
+        <div class="ft-box">
+            <a>帮助中心<i></i></a>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK">售前咨询</a>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK">售后客服</a>
+        </div>
+        <div class="ft-box">
+            <a>购物指南<i></i></a>
+            <a href="#" class="dingzhiTo">0 元设计</a>
+            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK">订单查询</a>
+            <a href="#">专题活动</a>
+        </div>
+        <div class="ft-box">
+            <p>客服热线：<span>400-0188-608</span></p>
+            <p>值班时间：7 * 24 Hours</p>
+            <p>嘉宝给您最好的服务</p>
+        </div>
+        <div class="ft-box">
+            <div class="erweima"></div>
+            <p>嘉宝·微信公众号</p>
+        </div>
+        <div class="ft-box">
+            <div class="erweima erweima2"></div>
+            <p>嘉宝·手机官方网</p>
+        </div>
+
+    </div>
+    <div class="box2 common-inner">
+        <div class="bottomlogo"></div>
+        <div class="bottomnote">
+            <p>@2017 嘉宝橱柜 版权所有</p>
+            <p>24小时免费咨询热线：400-0188-608</p>
+<p>售后电话 : 0731 - 88334455</p>
+            <p> 湘ICP备 12008428号 </p>
+        </div>
+        <div class="zhanlue">
+            <i>战略合作：</i>
+            <a href="http://www.siemens-home.bsh-group.cn" target="_blank"></a>
+            <a href="http://www.fotile.com" target="_blank"></a>
+            <a href="http://www.robam.com" target="_blank"></a>
+            <a href="http://www.vatti.com.cn" target="_blank"></a>
+            <a href="http://www.oulin.net/" target="_blank"></a>
+            <a href="http://www.franke.com/us/en/ks.html" target="_blank"></a>
+            <a href="http://www.putian.com/" target="_blank"></a>
+            <a href="http://www.gabalu.com.cn/" target="_blank"></a>
+            <a href="http://www.rinnai.com.cn/" target="_blank" class="lasthezuo"></a>
         </div>
     </div>
-    <div class="mainBottom" style="background:#fff;">
-        <img src="images/0528zhuanti04_06.jpg"/>
-        <img src="images/0528zhuanti04_07.jpg"/>
-        <img src="images/0528zhuanti04_08.jpg"/>
-        <img src="images/0528zhuanti04_09.jpg"/>
-    <div class="mainBottomInner">
-        <img src="images/0528zhuanti04_10.jpg"/>
-        <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:494px; left:920px;"></a>
-    </div>
-    <div class="mainBottomInner">
-        <img src="images/0528zhuanti04_11.jpg"/>
-        <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:654px; left:920px; "></a>
-    </div>
-        <div class="mainBottomInner">
-            <img src="images/0528zhuanti04_12.jpg"/>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:760px; left:920px;"></a>
-        </div>
-        <img src="images/0528zhuanti04_13.jpg"/>
-        <img src="images/0528zhuanti04_14.jpg"/>
-    <div class="mainBottomInner">
-        <img src="images/0528zhuanti04_15.jpg"/>
-        <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:239px; left:895px; "></a>
-    </div>
-        <div class="mainBottomInner">
-            <img src="images/0528zhuanti04_16.jpg"/>
-            <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank" style="width:215px; height:51px; line-height:51px;top:136px; left:895px;"></a>
-        </div>
-        <img src="images/0528zhuanti04_17.jpg"/>
-        <img src="images/0528zhuanti04_18.jpg"/>
-        <img src="images/0528zhuanti04_19.jpg"/>
-        <img src="images/0528zhuanti04_20.jpg"/>
-        <img src="images/0528zhuanti04_21.jpg"/>
-        <img src="images/0528zhuanti04_22.jpg"/>
-        <img src="images/0528zhuanti04_23.jpg"/>
-        <img src="images/0528zhuanti04_24.jpg"/>
-        <img src="images/0528zhuanti04_25.jpg"/>
+    <div class="box1 common-inner">
+        <div>友情链接：</div>
+        <a href="http://www.shzh.net/">上海装修网</a>
+        <a href="http://www.328f.cn/">红木家具</a>
+        <a href="http://www.bstzcs.com/">农村房屋设计图</a>
+        <a href="http://www.whjzw.net/">武汉装修</a>
+        <a href="http://www.shandongwang.cn/">山东网</a>
+        <a href="https://www.sc.cc/">实创室内装饰</a>
+        <a href="http://www.meilele.com/jiancai/">建材城</a>
+        <a href="http://www.chinamenwang.com/">木门</a>
+        <a href="http://www.to8to.com/yezhu/">装修知识</a>
+        <a href="http://www.jia400.com/">家居建材网</a>
+        <a href="http://www.ngbbs.com/">宁国论坛</a>
+        <a href="http://www.wy100.com/">家具网上商城</a>
+        <a href="http://qd.leju.com/">青岛房产</a>
+        <a href="http://www.021sofa.com/">沙发定做</a>
+        <a href="http://news.focus.cn/puyang/">濮阳房产新闻</a>
+        <a href="http://baixing.sz.js.cn/">苏州百姓网</a>
+        <a href="http://www.10333.com/">建筑网</a>
+        <a href="http://www.zsezt.com/">家居装修设计</a>
+        <a href="http://www.leleju.com/">家具价格</a>
+        <a href="http://www.opvip.com/">家具网上商城</a>
+        <a href="http://sh.jiwu.com/">上海买房</a>
+        <a href="http://m.suofeiya.com">社区O2O</a>
+        <a href="http://pinpai.9998.tv/">名酒</a>
+        <a href="http://www.chudian365.com/">集成灶</a>
+        <a href="http://www.jcqm001.com/">集成墻面</a>
+        <a href="http://suzhou.zxdyw.com/">苏州装修公司</a>
+        <a href="http://jn.zxdyw.com/">济南装修公司</a>
+        <a href="http://www.examw.com/jzs1/">一级建造师</a>
+        <a href="http://www.ebieshu.com/">别墅图片大全</a>
+        <a href="http://bbs.51gaifang.com/">自建房论坛</a>
+        <a href="http://www.51gaifang.com/">房屋设计图</a>
+        <a href="http://www.51tuzhi.com/">新农村住宅设计图</a>
+        <a href="http://esf.gz.fang.com/">广州二手房</a>
+        <a href="http://www.segahome.com/">家用中央空调价格</a>
+        <a href="http://www.tianqi4.com/">天气在线</a>
+        <a href="http://news.homekoo.com/">装修网</a>
+        <a href="http://www.chinayigui.com/">整体衣柜</a>
+        <a href="http://www.shangceng.com.cn/">北京别墅装修</a>
+        <a href="http://hz.lianjia.com/">杭州二手房</a>
+        <a href="http://www.qizuang.com/">装修公司</a>
+
     </div>
 
 </div>
-    <div id="footer">
-        <div class="box1 common-inner">
-            <div class="ft-box">
-                <a>
-                    新手指南
-                    <i></i>
-                </a>
-                <a href="../../htmls/about.html">关于嘉宝<i></i></a>
-                <a href="../../htmls/join.html">加盟嘉宝</a>
-                <a href="../../htmls/dingzhi.html" class="dingzhiTo">现在定制</a>
-            </div>
-            <div class="ft-box">
-                <a>帮助中心<i></i></a>
-                <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK">售前咨询</a>
-                <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK">售后客服</a>
-            </div>
-            <div class="ft-box">
-                <a>购物指南<i></i></a>
-                <a href="#" class="dingzhiTo">0 元设计</a>
-                <a href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK">订单查询</a>
-                <a href="#">专题活动</a>
-            </div>
-            <div class="ft-box">
-                <p>客服热线：<span>400-0188-608</span></p>
-                <p>值班时间：7 * 24 Hours</p>
-<p>售后电话 : 0731 - 88334455</p>
-                <p>嘉宝给您最好的服务</p>
-            </div>
-            <div class="ft-box">
-                <div class="erweima"></div>
-                <p>嘉宝·微信公众号</p>
-            </div>
-            <div class="ft-box">
-                <div class="erweima erweima2"></div>
-                <p>嘉宝·手机官方网</p>
-            </div>
-
-        </div>
-        <div class="box2 common-inner">
-            <div class="bottomlogo"></div>
-            <div class="bottomnote">
-                <p>@2017 嘉宝橱柜 版权所有</p>
-                <p>24小时免费咨询热线：400-0188-608</p>
-                <p> 湘ICP备 12008428号 </p>
-            </div>
-            <div class="zhanlue">
-                <i>战略合作：</i>
-                <a href="http://www.siemens-home.bsh-group.cn" target="_blank"></a>
-                <a href="http://www.fotile.com" target="_blank"></a>
-                <a href="http://www.robam.com" target="_blank"></a>
-                <a href="http://www.vatti.com.cn" target="_blank"></a>
-                <a href="http://www.oulin.net/" target="_blank"></a>
-                <a href="http://www.franke.com/us/en/ks.html" target="_blank"></a>
-                <a href="http://www.putian.com/" target="_blank"></a>
-                <a href="http://www.gabalu.com.cn/" target="_blank"></a>
-                <a href="http://www.rinnai.com.cn/" target="_blank" class="lasthezuo"></a>
-            </div>
-        </div>
-        <div class="box1 common-inner">
-            <div>友情链接：</div>
-            <a href="http://www.shzh.net/">上海装修网</a>
-            <a href="http://www.328f.cn/">红木家具</a>
-            <a href="http://www.bstzcs.com/">农村房屋设计图</a>
-            <a href="http://www.whjzw.net/">武汉装修</a>
-            <a href="http://www.shandongwang.cn/">山东网</a>
-            <a href="https://www.sc.cc/">实创室内装饰</a>
-            <a href="http://www.meilele.com/jiancai/">建材城</a>
-            <a href="http://www.chinamenwang.com/">木门</a>
-            <a href="http://www.to8to.com/yezhu/">装修知识</a>
-            <a href="http://www.jia400.com/">家居建材网</a>
-            <a href="http://www.ngbbs.com/">宁国论坛</a>
-            <a href="http://www.wy100.com/">家具网上商城</a>
-            <a href="http://qd.leju.com/">青岛房产</a>
-            <a href="http://www.021sofa.com/">沙发定做</a>
-            <a href="http://news.focus.cn/puyang/">濮阳房产新闻</a>
-            <a href="http://baixing.sz.js.cn/">苏州百姓网</a>
-            <a href="http://www.10333.com/">建筑网</a>
-            <a href="http://www.zsezt.com/">家居装修设计</a>
-            <a href="http://www.leleju.com/">家具价格</a>
-            <a href="http://www.opvip.com/">家具网上商城</a>
-            <a href="http://sh.jiwu.com/">上海买房</a>
-            <a href="http://m.suofeiya.com">社区O2O</a>
-            <a href="http://pinpai.9998.tv/">名酒</a>
-            <a href="http://www.chudian365.com/">集成灶</a>
-            <a href="http://www.jcqm001.com/">集成墻面</a>
-            <a href="http://suzhou.zxdyw.com/">苏州装修公司</a>
-            <a href="http://jn.zxdyw.com/">济南装修公司</a>
-            <a href="http://www.examw.com/jzs1/">一级建造师</a>
-            <a href="http://www.ebieshu.com/">别墅图片大全</a>
-            <a href="http://bbs.51gaifang.com/">自建房论坛</a>
-            <a href="http://www.51gaifang.com/">房屋设计图</a>
-            <a href="http://www.51tuzhi.com/">新农村住宅设计图</a>
-            <a href="http://esf.gz.fang.com/">广州二手房</a>
-            <a href="http://www.segahome.com/">家用中央空调价格</a>
-            <a href="http://www.tianqi4.com/">天气在线</a>
-            <a href="http://news.homekoo.com/">装修网</a>
-            <a href="http://www.chinayigui.com/">整体衣柜</a>
-            <a href="http://www.shangceng.com.cn/">北京别墅装修</a>
-            <a href="http://hz.lianjia.com/">杭州二手房</a>
-            <a href="http://www.qizuang.com/">装修公司</a>
-
-        </div>
-
-    </div>
 <div id="bottom">
     <div class="common-inner">
         <div class="jiabaologo"></div>
@@ -519,6 +508,7 @@
     <a class="top5 top0"  href="http://www2.53kf.com/webCompany.php?arg=10133101&style=2&kflist=off&kf=19680502&zdkf_type=3&language=cn&charset=GBK" target="_blank">参观工地</a>
     <a class="top6 top0">返回页顶</a>
 </div>
+
 </body>
 <!--53kf 客服系统模块 -->
 <script>(function() {var _53code = document.createElement("script");_53code.src = "//tb.53kf.com/code/code/10133101/2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script>
