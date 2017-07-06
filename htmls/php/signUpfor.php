@@ -11,7 +11,7 @@ if( $_SESSION['code'] !== strToUpper($_POST["codes"])){
     var_dump($_SESSION['code']);
     echo '<br/>';
     var_dump(strToUpper($_POST["codes"]));
-    echo '<script>setTimeout(function(){window.location.href=\'http://localhost/Jiabao0519/htmls/sign.php\'},1000)</script>';
+    echo '<script>setTimeout(function(){window.location.href=\'http://4535292.cn/htmls/sign.php\'},1000)</script>';
 
 }else{
     include 'connect.php';
@@ -41,7 +41,7 @@ if( $_SESSION['code'] !== strToUpper($_POST["codes"])){
 
 
     }else{          // 帐号若已经注册
-        echo "<script>alert(\"当前帐号已存在！\");setTimeout(function(){window.location.href='http://localhost/Jiabao0519/htmls/sign.php'},100)</script>";
+        echo "<script>alert(\"当前帐号已存在！\");setTimeout(function(){window.location.href='http://4535292.cn/htmls/sign.php'},100)</script>";
     }
 
 // close mysqli connect
