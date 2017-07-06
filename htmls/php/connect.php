@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost" , "root" , "Novellus2010")
+$link = mysqli_connect("localhost" , "test" , "Novellus2010")
     or die(  "连接 MySQL 失败: " . mysqli_connect_error() );
 
 mysqli_query($link ,"set names ’utf8’ ");
