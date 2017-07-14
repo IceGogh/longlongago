@@ -40,7 +40,7 @@ $(function(){
             },
             function(){
                 $(this).find('.noteName').css({
-                    bottom:'-90px'
+                    bottom:'-96px'
                 })
             }
         )
