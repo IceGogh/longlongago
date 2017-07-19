@@ -8,11 +8,65 @@
     <link href="../images/favicon.ico" rel="short icon"/>
     <link href="../IEcss/common.css" rel="stylesheet"/>
     <link href="../IEcss/IEindex.css" rel="stylesheet"/>
-    <link href="css/common2nd.css" rel="stylesheet"/>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
-    <script src="js/about.js"></script>
+    <script>
+        $(function(){
+            var MarginLeft = 0;
+            var marginChange = 454;
+            var MarginLeft2 = 0;
+            var marginChange2 = 642;
+            setInterval(function(){
+                MarginLeft-= marginChange;
+                MarginLeft2-= marginChange2;
+                $('.lunbo1 > ul').animate({'margin-left': MarginLeft +'px'});
+                $('.lunbo2').animate({'margin-left': MarginLeft2 +'px'});
+                if(MarginLeft == -1816 || MarginLeft == 0){
+                    marginChange = -marginChange;
+                }
+                if(MarginLeft2 == -5136 || MarginLeft2 == 0){
+                    marginChange2 = -marginChange2;
+                }
+            },1500);
+
+        })
+    </script>
     <script type="text/javascript" src="//s.union.360.cn/165944.js" async defer></script>
+    <style>
+        #main { width:100%; height:auto;}
+        #main .mainIn {
+            width:100%; overflow:hidden;
+        }
+        .mainIn > div {
+            width:1920px;  position:relative; left:50%; margin-left:-960px;
+        }
+        .mainIn img{
+            position:relative;
+            display:block;
+            width:100%;
+        }
+        .lunbo1{
+            width:1362px; height:323px;  position:absolute; top:330px; left:285px; z-index:20;
+            overflow: hidden;
+        }
+        .lunbo1 ul{
+            width:3178px;
+        }
+        .lunbo1 ul, .lunbo1 ul li {
+            float:left;
+            font-size:0;
+        }
+        .lunbo1 ul li image {
+            display:block;
+            float:left;
+        }
+        .lunbo2{
+            width: 5778px;
+        }
+        .lunbo2 li{
+            float:left;
+        }
+    </style>
 </head>
 <body>
 <div class="header-topT">
@@ -140,79 +194,64 @@
         </div>
     </div>
 </div>
-<div id="banner">
-        <img src="images/aboutBanner.jpg"/>
-    </div>
+
 <div id="main">
-        <div class="common-inner clearfloat">
-            <div class="main-l">
-                <div class="title">
-                    <h3>关于嘉宝</h3>
-                </div>
-                <ul class="clearfloat">
-                    <li class="selectLi">公司简介</li>
-                    <li>发展历程</li>
-                    <li>所获荣誉</li>
-<!--
-                    <li>
-                        <a href="">联系我们</a>
-                    </li>
--->
-                </ul>
-            </div>
-            <div class="main-r">
-                <div class="title">
-                    <h3></h3>
-                    <div class="title2nd">
-                        <a href="../index.html">首页</a>
-                        -
-                        <a href="about.html">关于嘉宝</a>
-                        -
-                        <a href="#" class="title3nd"></a>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="main-box">
-                    <div class="main-inner aboutshow">
-                        <img src="images/aboutmain.jpg" title="嘉宝长沙厂区"/>
-                        <p>湖南嘉宝家居有限公司（品牌名称：嘉宝厨柜）是一家专业从事整体厨房、整体衣柜、木门等家具定制，为客户提供集研发、设计、生产、销售、安装于一体的一条龙服务的本土大型家具企业集团。</p>
-
-                        　　<p>嘉宝厨柜是湖南拥有自主产权式现代化工业园的定制厨柜品牌，公司60000㎡的大型工业园区坐落于长沙市望城区丁字镇。公司秉承“客户满意度高于一切”的经营宗旨，致力于为客户提供多样化的产品，同时也为客户提供一个方便快捷的一站式定制环境和平台，真正为客户做到“省心、省力、省时”。嘉宝厨柜一直本着“国际品质，十年质保”的产品核心理念服务客户。</p>
-
-                        　   <p>随着公司的不断壮大，嘉宝人深知对客户对社会所肩负的责任也越来越重大，为将公司的产品品质提升到一个新的高度，公司先后与<a href="http://www.dareglobal.com.cn/" target="_blank">大亚科技(000910)</a> 、广州生美、<a href="http://www.blum.com" target="_blank">奥地利百隆</a> 、尤林帝王以及<a href="http://www.siemens-home.bsh-group.cn/" target="_blank"> 西门子电器</a>、<a href="http://www.rinnai.com.cn/" target="_blank">林内电器</a> 等国际国内知名材料供应商签订了合作协议。 与大亚科技更是有着为期10年战略合作协议，嘉宝将成为其湖南地区橱柜合作品牌及其授权运营商。</p>
-
-                        　　<p>作为后起之秀的嘉宝厨柜通过几年的强势发展，尤其在市场占有率不断提升和品牌知名度不断提高的背景下，在整个行业里扮演了越来越重要的角色。</p>
-                    </div>
-                    <div class="main-inner">
-                        　　<h4>嘉宝公司发展历程</h4>
-
-                        　　<p>嘉宝Gabor橱柜诞生于2005年，以高品质的橱柜及优质的服务赢得了品牌美誉，2011年成功控股拥有15年高端橱柜制造经验的深圳德隆家居，继而与德国豪迈签订合作协议，成功引进豪迈生产线，不断加大在产品研发上的投入，获得多项国家专利，全力打造高端橱柜品牌。</p>
-
-                        　　<h4><a href="http://roll.sohu.com/20110624/n311478462.shtml" target="_blank">2011年5月成功收购深圳德隆家居</a> </h4>
-
-                        　　<p>2011年5月成功收购深圳德隆家居有着10年高端家具及橱柜制造经验的德隆家居，一直以品质占领珠三角高端市场的领导地位，高端橱柜出口企业的领头羊。嘉宝控股德隆家居后，在东莞建立15000平米的德国及意大利进口生产线，主要生产橱柜及衣柜门板，部分柜体，供嘉宝及出口市场!</p>
-
-                        　　<h4>2011年7月与世界顶级家具生产线德国豪迈签订协议</h4>
-
-                        　　<p>湖南基地引进<a href="http://www.homag.com/en/" target="_blank"> 德国豪迈 </a>生产线，首批进口设备在原厂使用，第二批将在工业园投入使用。</p>
-
-                        　　<h4>湖南家居及橱柜业的豪迈生产线!</h4>
-
-                        　　<p>嘉宝拟定联合湖南大学设计艺术学院、米兰理工大学设计艺术系、湖南科技大学工业设计系成立“嘉宝西门子厨房设计艺术基地”每年推出16款引领厨房设计趋势的新品!</p>
-
-                        　　<h4>2013年8月由嘉宝集团投资新建的嘉宝橱柜大型现代化工业园近日正式投产</h4>
-
-                        　　<p>嘉宝橱柜大型现代化工业园占地近7万平米，集写字楼、研发设计中心、加工生产中心、产品展示中心、员工生活区等为一体的大型现代化工业园。工业园采用优化建厂方案，园林式工业园区规划，采用德国专业公司设计的生产流水线，引进德国豪迈设备，运营系统，导入先进的6S管理，先进的产品检测及质控系统，一期生产线的橱柜年生产能力预计可达6万套。嘉宝橱柜工厂的诞生，不仅仅是嘉宝企业发展历史上的转折点，也是湖南橱柜发展史上的历程碑!据悉，因整体橱柜为量身定制的个性化家居产品，生产制造环节是橱柜企业发展的核心环节，这也一直是困扰湖南橱柜行业高速发展的瓶颈。嘉宝橱柜投巨资建造的这一现代化生产基地，刷新了湖南橱柜业小作坊式生产的落后历史，掀开了湖南橱柜业高速发展的新篇章，让湖南橱柜业迎来了现代化先进的制造时代，也让湖南消费者能轻松享用到本土工厂制造的高品质橱柜。</p>
-                    </div>
-                    <div class="main-inner">
-                        <img src="images/about001.jpg"/>
-                        <img src="images/about002.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
+    <div class="mainIn">
+        <div style="height:774px; background:url('images/Nabout%20(20).jpg') no-repeat center"></div>
+    </div>
+    <div style="position:relative;  width:1348px; height:450px; margin:130px auto 60px;">
+            <h4 style="position:absolute; top:0; left:0">嘉宝企业宣传片</h4>
+            <video src="http://cloud.video.taobao.com/play/u/3244903357/p/1/e/6/t/1/50011842386.mp4" style="width:652px; height:450px; float:left;" controls="controls" ><br/><br/><br/>您的浏览器不支持此种视频格式。请更换新版浏览器查看</video>
+        <div style="width:652px; height:450px; float:right; background:url('images/Nabout%20(30).jpg') no-repeat center;">
         </div>
     </div>
+    <div style="width:100%; overflow: hidden;">
+        <div style="z-index:10; width:1920px; height:1040px; background:url('images/Nabout%20(1).jpg') no-repeat center; position:relative; top:0; left:50%; margin-left:-960px;">
+            <div class="lunbo1">
+                <ul>
+                    <li><img src="images/Nabout%20(2).jpg"/></li>
+                    <li><img src="images/Nabout%20(3).jpg"/></li>
+                    <li><img src="images/Nabout%20(4).jpg"/></li>
+                    <li><img src="images/Nabout%20(5).jpg"/></li>
+                    <li><img src="images/Nabout%20(6).jpg"/></li>
+                    <li><img src="images/Nabout%20(7).jpg"/></li>
+                    <li><img src="images/Nabout%20(8).jpg"/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mainIn">
+        <div style=" height:1464px; background:url('images/Nabout%20(12).jpg') no-repeat center"></div>
+        <div style=" height:863px; background:url('images/Nabout%20(13).jpg') no-repeat center"></div>
+    </div>
+    <div class="mainIn">
+        <div style="height:490px; position:relative; margin-top:325px; background:url('images/Nabout%20(11).jpg') no-repeat center">
+            <div style="width:1065px; height:561px; background:url('images/Nabout%20(9).jpg') no-repeat center; position:absolute; top:-165px; left:50%;  margin-left:-533px;">
+                <div style="width:642px; height:580px;  position:absolute; top:-70px; left:30px; overflow: hidden;">
+                    <ul class="lunbo2">
+                        <li><img src="images/Nabout%20(21).jpg"/></li>
+                        <li><img src="images/Nabout%20(22).jpg"/></li>
+                        <li><img src="images/Nabout%20(23).jpg"/></li>
+                        <li><img src="images/Nabout%20(24).jpg"/></li>
+                        <li><img src="images/Nabout%20(25).jpg"/></li>
+                        <li><img src="images/Nabout%20(26).jpg"/></li>
+                        <li><img src="images/Nabout%20(27).jpg"/></li>
+                        <li><img src="images/Nabout%20(28).jpg"/></li>
+                        <li><img src="images/Nabout%20(29).jpg"/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainIn">
+        <div style=" height:710px; background:url('images/Nabout%20(15).jpg') no-repeat center"></div>
+        <div style=" height:1457px; background:url('images/Nabout%20(16).jpg') no-repeat center"></div>
+        <div style=" height:1135px; background:url('images/Nabout%20(17).jpg') no-repeat center"></div>
+        <div style=" height:1490px; background:url('images/Nabout%20(18).jpg') no-repeat center"></div>
+        <div style=" height:1026px; background:url('images/Nabout%20(19).jpg') no-repeat center"></div>
+    </div>
+</div>
 
 <div id="footer">
     <div class="box1 common-inner">
