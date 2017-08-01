@@ -42,8 +42,9 @@ $(function(){
                     '<span>'+
                     '<img src="detail/images/'+ jsonData[(i <=9 ? "0"+i : i)][1] +'/1.jpg"/>'+
                     '</span>'+
-                    '<div class="style">'+ jsonData[(i <=9 ? "0"+i : i)][0] +'</div>'+
-                    '<div class="style2nd">'+ jsonData[(i <=9 ? "0"+i : i)][2]+'</div>'+
+                    '<div class="style">'+ jsonData[(i <=9 ? "0"+i : i)][2] +'</div>'+
+                        /*'+ jsonData[(i <=9 ? "0"+i : i)][2]+'*/
+                    '<div class="style2nd"></div>'+
                     '</a>'
             };
             mainboxInner += '<a class="clearfix"></a>';

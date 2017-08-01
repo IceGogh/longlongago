@@ -10,32 +10,32 @@ $(function(){
     function callBack(data){
         var locUrl = window.location.href;
         var indexNub = locUrl.indexOf('ID=') +3;
-        //  »ñÈ¡µ±Ç°ÏêÇéÒ³±àºÅ
+        //  ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½
         var index = (locUrl.substr(indexNub)).slice(0,2);
 
 
-        //  ¸ù¾Ý±àºÅ£¬  Ìæ»»ÏêÇéÒ³ÄÚÈÝ
-            // ·Å´ó¾µ
-        $('#main .title').find('span').html(data[index][0]);
+        //  ï¿½ï¿½ï¿½Ý±ï¿½Å£ï¿½  ï¿½æ»»ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½
+            // ï¿½Å´ï¿½
+        $('#main .title').find('span').html(data[index][2]);
         $('.mainpic a').find('img').attr('src','images/' + data[index][1] + '/1.jpg');
         for(var i=0; i<$('.selectP ul li').length; i++){
             $('.selectP ul li').eq(i).find('img').attr('src','images/' + data[index][1] +'/'+(parseInt(i)+1) + '.jpg')
         }
 
-            //  ÉÌÆ·½éÉÜ
+            //  ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
         var $jieshao = $('.detail-r');
         removeImg();
         function removeImg(){
-            $jieshao.find('h4').html(data[index][0]);
-            $jieshao.find('.titleSmall').html(data[index][1]);
-            $jieshao.find('.titlenote').html(data[index][2]);
+            $jieshao.find('h4').html(data[index][2]);
+            // $jieshao.find('.titleSmall').html(data[index][1]);
+            // $jieshao.find('.titlenote').html(data[index][2]);
             $jieshao.find('.titlenote2nd').html(data[index][3]);
             $jieshao.find('.fengge span').html(data[index][4]);
             $jieshao.find('.caizhi span').html(data[index][5]);
             $jieshao.find('.guige span').html(data[index][6]);
             $jieshao.find('.price span').html(data[index][7]);
         }
-            //  ÉÌÆ·ÏêÇé
+            //  ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 
         var Img = "";
         var ImgCan = "images/" + data[index][1] + "/790%20(0).jpg";
