@@ -1,6 +1,6 @@
 $(function(){
 
-    // Ò³ï¿½æ»¬ï¿½ï¿½
+    // Ò³Ãæ»¬¶¯
     var $detail = $('.detailbox .title');
     var titleTop = offtop($detail.get(0));
     (function(){
@@ -17,12 +17,12 @@ $(function(){
 
         };
     })();
-    //  ï¿½Å´ï¿½
+    //  ·Å´ó¾µ
 
 
         var topY, leftX, changeX, changeY;
 
-        //
+        // »ñÈ¡×ó±ß¾àÀëÆÁÄ»±ß¿ò¾àÀë
         function offLeft(elm){
             var leftData = elm.offsetLeft;
             var parentElm = elm.offsetParent;
@@ -32,7 +32,7 @@ $(function(){
             }
             return leftData;
         }
-        //
+        // »ñÈ¡¶¥²¿...........¾àÀë
         function offtop(elm){
             var topData = elm.offsetTop;
             var parentElm = elm.offsetParent;
@@ -52,7 +52,7 @@ $(function(){
         var FindTool = $('#main .findMo');
         var bigPic = $('.bigpic');
 
-        // æ”¾å¤§é•œ
+        // »¬¶¯
         findpicTo.onmousemove = function(ev){
             FindTool.css({display:'block'});
             bigPic.css({display:'block'});
@@ -78,7 +78,7 @@ $(function(){
             var indexNub = url.indexOf('images');
             var bgurl = url.slice(indexNub);
 
-            //  èŽ·å– å·¦  ä¸Š å€¼
+            //  ËÙÂÊ
             var rate = -2.5 ;
             var LeftBs = parseInt(FindTool.css('left'));
             var TopBs = parseInt(FindTool.css('top'));
@@ -88,7 +88,7 @@ $(function(){
                 backgroundPosition: rate*LeftBs +'px '+rate*TopBs +'px'
             })
         };
-        // ç§»å‡º æ”¾å¤§é•œæ¶ˆå¤±
+        // Àë¿ª
         findpicTo.onmouseout = function(){
             FindTool.css({display:'none'});
             bigPic.css({display:'none'});
@@ -96,7 +96,7 @@ $(function(){
 
 
 
-    // Ñ¡ï¿½ï¿½é¿´ï¿½ï¿½Í¬ï¿½ï¿½Í¼
+    // Ñ¡Ôñ²é¿´²»Í¬Ö÷Í¼
     (function(){
         $('.selectP ul li').on('mouseover',function(){
             $(this).addClass('selectLi')
@@ -104,7 +104,7 @@ $(function(){
             var url = $(this).children('img').attr('src') ;
             $('.mainpic a img').attr('src',url)
         });
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°ï¿½Å¥
+        // µã»÷×óÓÒ°´Å¥
         var n = 0;
         function moveSelectImg(moveDis){
             $('.selectP ul').css({left : moveDis+'px'})
@@ -126,7 +126,7 @@ $(function(){
             moveSelectImg(-110*n)
         });
     })();
-    // ï¿½ï¿½Ñ¯ï¿½ï¿½Å¥
+    // ×ÉÑ¯°´Å¥
     $('.zixun').hover(
         function(){
             $(this).css({borderRadius:'0px',color:'red'})
@@ -136,7 +136,7 @@ $(function(){
         }
     );
 
-    // ï¿½ï¿½Æ·ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½
+    // ÉÌÆ·ÏêÇé£¬·þÎñ±£ÕÏÇÐ»»
 
     $('.detailbox .title > div ').on('click',function(){
         $(this).addClass('hoverDetail')

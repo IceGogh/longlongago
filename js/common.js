@@ -1,4 +1,10 @@
 $(function(){
+    // get cust Ip url
+    var IP = '';
+    $.getJSON('//freegeoip.net/json/', function(data) {
+        IP = data.ip;
+    });
+
     // header-nav
         // header-nav all-lei
         $('#header-nav .all-lei').parent().hover(
@@ -106,8 +112,21 @@ $(function(){
 
         //submit info
         function submitInfo(name, tel, loupan, mianji ){
-            window.open("http://jiabao.dasn.com.cn/index.php/calltel/dooperate?name=" + name + "&tel=" + tel + "&loupan=" + loupan + "&mianji=" + mianji + "&content=" + document.title + "&url=" + location.href + "&sourceid=" + 1);
+
+            window.open("http://www.siemensgabor.com/datas/dataCollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href + "&IP=" + IP, 'sendInfo');
+            alert('提交成功,嘉宝客服将尽快联系您!');
+           
+
         }
+    // window.open("http://jiabao.dasn.com.cn/index.php/calltel/dooperate?name=" + name + "&tel=" + tel + "&loupan=" + loupan + "&mianji=" + mianji + "&content=" + document.title + "&url=" + location.href + "&sourceid=1");
+        
+    //
+    //
+    //         window.open("http://localhost/Jiabao0519/htmls/php/datacollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href );
+
+
+
+
 
         BtnClick($('#confirm'));
         BtnClick($('.DZBtn'));
@@ -156,6 +175,7 @@ $(function(){
                 }else{
                     //  若验证通过 则提交客户信息
                     submitInfo(elm,phNub,location,xiaoqu);
+                    // send(elm,phNub,location,xiaoqu);
                 }
             }
         }
@@ -215,7 +235,7 @@ $(function(){
         $(this).parent('i').css({
             display:'none'
         })
-    })
+    });
 
     // header-top ΢�Ź��ں�
     $('.header-top .iconWX').on('click',function(){
@@ -228,12 +248,15 @@ $(function(){
     });
 
 
-    //百度统计数据
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?16b1a369d1392d8f7e8978b592e0139f";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+    //  退出会员登录状态
+        $('.closelog').on('click', function(){
+
+            $.ajax({
+                url: 'http://localhost/Jiabao0519/htmls/php/closelog.php',
+                type: 'post',
+                success: function(data){
+                    window.location.href ="http://localhost/Jiabao0519/index.html";
+                }
+            })
+        })
 });
