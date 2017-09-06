@@ -110,21 +110,20 @@ $(function(){
 
 
 
-        //submit info
-        function submitInfo(name, tel, loupan, mianji ){
+    function submitInfo(name, tel, loupan, mianji ){
 
-            window.open("http://www.siemensgabor.com/datas/dataCollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href + "&IP=" + IP, 'sendInfo');
-            alert('提交成功,嘉宝客服将尽快联系您!');
-           
-
-        }
-    // window.open("http://jiabao.dasn.com.cn/index.php/calltel/dooperate?name=" + name + "&tel=" + tel + "&loupan=" + loupan + "&mianji=" + mianji + "&content=" + document.title + "&url=" + location.href + "&sourceid=1");
-        
-    //
-    //
-    //         window.open("http://localhost/Jiabao0519/htmls/php/datacollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href );
-
-
+        $.ajax({
+            url : "http://www.siemensgabor.com/datas/dataCollection.php?name=" + name + "&phone=" + tel + "&location=" + loupan + "&house=" + mianji + "&content=" + document.title + "&url=" + location.href + "&IP=" + IP,
+            type : 'get',
+            beforeSend : function(){
+                $('.loading').css({display: 'block'})
+            },
+            success : function(data){
+                $('.loading').css({display: 'none'});
+                alert(data);
+            }
+        })
+    }
 
 
 

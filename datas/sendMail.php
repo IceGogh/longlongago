@@ -5,9 +5,9 @@ $message = "新客户：".$name."\n".'手机号码:'.$phone."\n".
 
 
 if(mail($to, $subject, $message)){
-    echo "Ok.";
+    echo "嘉宝客服:";
 }else{
-    echo "send mail fail.";
+   echo "send mail fail.";
 };
 
 ?>

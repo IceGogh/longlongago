@@ -23,22 +23,21 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  border-style: none;
 }
-.clearfloat:after {
-  content: '';
+.clearfix {
+  display: block;
   width: 0;
   height: 0;
   font-size: 0;
   clear: both;
-  border: none;
-  padding: 0;
-  display: block;
 }
 a,
 img {
   outline: none;
   border: 0;
 }
+@bscolor :#00a6b9;
 body {
   background: #fff;
   position: relative;
@@ -46,19 +45,31 @@ body {
   height: 100%;
   font-family: Microsoft YaHei;
 }
-#bgima {
-  width: 100%;
-  height: 1080px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  margin-left: -960px;
-  display: none;
-}
-
 .common-inner {
   width: 1200px;
   margin: 0 auto;
+}
+
+.loading {
+  display: none;
+  z-index: 10000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,10,10,.4);
+  top:0;
+  left: 0;
+
+   img {
+     display: block;
+     position:fixed;
+     width: 100px;
+     height: 100px;
+     top: 50%;
+     left: 50%;
+     margin-top: -50px;
+     margin-left: -50px;
+   }
 }
 
 .header-topT{
@@ -72,6 +83,16 @@ body {
   .welcome {
     float:left;
     height:26px;
+
+    p{
+      a {
+        color:red;
+      }
+      a:hover{
+        color:@bscolor;
+        text-decoration: underline;
+      }
+    }
   }
 
   .common-inner{
@@ -137,113 +158,117 @@ body {
     }
   }
 }
-#header-logo {
+
+.header-top {
   width: 100%;
   height: 100px;
-  background: #fff;
 }
-#logo {
-  display: block;
+.header-top .common-inner > div {
+  float: left;
+}
+.header-top .logo {
+  padding-top: 15px;
   width: 146px;
-  float: left;
-  overflow: hidden;
-  padding-top: 14px;
+  height: 69px;
 }
-#search {
-  width: 480px;
-  margin: 20px 0 0 90px;
-  float: left;
+.header-top .index-search {
+  width: 450px;
+  height: 50px;
+  padding-top: 20px;
+  margin-left: 88px;
 }
-#search .chanpin {
+.header-top .index-search > div {
   width: 60px;
   height: 20px;
-  text-align: center;
   line-height: 20px;
-  font-size: 12px;
+  text-align: center;
   color: #fff;
   background: #00a6b9;
+  font-size: 14px;
 }
-#search form {
-  height: 34px;
-}
-#search input {
-  height: 26px;
-  padding: 0;
-  border: 2px #00a6b9 solid;
+.header-top .index-search input {
+  border: 1px #00a6b9 solid;
   float: left;
-  outline: none;
 }
-#search input[type="text"] {
-  text-indent: .5em;
-  width: 394px;
+.header-top .index-search input[type="text"] {
+  height: 26px;
+  line-height: 26px;
+  text-indent: 1em;
+  width: 368px;
 }
-#search input[type="submit"] {
-  width: 76px;
+.header-top .index-search input[type="button"] {
+  background: #00a6b9;
+  color: #fff;
+  width: 70px;
   height: 30px;
-  background: #00a6b9;
-  color: #fff;
+  line-height: 30px;
+  text-align: center;
   cursor: pointer;
 }
-#search p {
-  height: 21px;
-  line-height: 21px;
-  color: #c5c5c5;
-  font-size: 12px;
-  text-indent: .7em;
+.header-top .index-search input[type="button"]:hover {
+  background: #4842d2;
 }
-#search p a {
-  margin: 0 3px;
-  text-align: center;
-}
-#iconbox {
-  height: 100px;
-  float: right;
-}
-#iconbox .iconOne {
+.header-top .index-search p {
   display: block;
-  height: 26px;
+  width: 380px;
+  height: 24px;
+  line-height: 24px;
+}
+.header-top .index-search p a {
+  color: #777;
+  font-size: 14px;
+  margin: 0 3px;
+}
+.header-top .index-lianjie {
+  float: right!important;
+}
+.header-top .index-lianjie a {
+  display: block;
   width: 100px;
-  padding-top: 74px;
-  margin: 0 10px;
-  background: url("../images/icon%20(3).png") no-repeat;
-  background-position: 16px 10px;
+  height: 20px;
+  padding-top: 80px;
+  background-repeat: no-repeat;
+  background-position: 18px 10px;
   text-align: center;
   float: left;
   cursor: pointer;
   font-size: 12px;
 }
-#iconbox .iconOne:nth-of-type(2) {
+.header-top .index-lianjie a.iconTM {
+  background-image: url("../images/icon%20(3).png");
+}
+.header-top .index-lianjie a.iconJD {
   background-image: url("../images/icon%20(1).png");
 }
-#iconbox .iconOne:nth-of-type(3) {
+.header-top .index-lianjie a.iconTB {
   background-image: url("../images/icon%20(2).png");
 }
-#iconbox .weixinEr {
+.header-top .index-lianjie a.iconWX {
   background-image: url("../images/icon%20(4).png");
   position: relative;
-}
-#iconbox .weixinEr i {
-  display: none;
-  position: absolute;
   z-index: 5500;
-  top: 102px;
-  left: -40px;
+}
+.header-top .index-lianjie a.iconWX i {
+  position: absolute;
   width: 120px;
   height: 120px;
-  background: url("../images/weixinEr.jpg") no-repeat;
-  background-size: contain;
+  background: url("../images/weixinEr.jpg") no-repeat center;
+  top: 100px;
+  left: 20px;
+  border: 1px #777 dotted;
+  display: none;
 }
-#iconbox .weixinEr i span {
+.header-top .index-lianjie a.iconWX span {
   position: absolute;
-  width: 40px;
+  width: 20px;
   height: 20px;
-  top: -20px;
-  right: 0;
-  line-height: 20px;
-  text-align: center;
-  font-size: 12px;
-  background: #777;
+  background: url("../images/x.png") no-repeat center;
+  top: 100px;
+  left: 140px;
+  border: 1px #777 dotted;
+  display: none;
 }
+
 #header-nav {
   position: relative;
   height: 46px;
@@ -307,10 +332,9 @@ body {
   position: absolute;
   left: 0;
   top: 46px;
-  width: 20%;
+  width: 50%;
   background: rgba(200, 200, 200, 0.9);
   z-index: 5000;
-  height:700px;
 }
 #header-nav #menubox .lei {
   padding: 0 10px;
@@ -328,6 +352,41 @@ body {
 }
 #header-nav #menubox dd a:hover {
   color: #00a6b9;
+}
+
+
+.header-main {
+  background-color: #00a6b9;
+}
+.header-main .common-inner {
+  height: 46px;
+  line-height: 46px;
+}
+.header-main .common-inner a {
+  display: block;
+  padding: 0 10px;
+  margin: 0 10px;
+  color: #fff;
+  float: left;
+}
+.header-main .common-inner a:hover {
+  color: #ff4200;
+}
+.header-main .common-inner .order {
+  display: block;
+  background: red;
+  width: 104px;
+  height: 33px;
+  border-radius: 15px 15px 15px 15px;
+  margin-top: 8px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+}
+.header-main .common-inner .order:hover {
+  background: #5895d5;
 }
 #dingzhi {
   z-index: 6500;
@@ -629,7 +688,6 @@ body {
   top: 130px;
   right: 40px;
   cursor: pointer;
-  display:none;
 }
 .toTop > a {
   display: block;
@@ -667,3 +725,5 @@ body {
 .toTop .top5 {
   background-position-y:-240px
 }
+
+
